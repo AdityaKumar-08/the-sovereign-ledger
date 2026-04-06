@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>National Overview | Sovereign Ledger</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "tertiary": "#3a0800",
+                "on-secondary": "#ffffff",
+                "surface-bright": "#fbf8ff",
+                "secondary-container": "#a0f399",
+                "secondary-fixed-dim": "#88d982",
+                "primary-container": "#1a237e",
+                "tertiary-container": "#5f1300",
+                "surface-tint": "#4c56af",
+                "on-surface-variant": "#454652",
+                "outline": "#767683",
+                "on-secondary-container": "#217128",
+                "primary": "#000666",
+                "outline-variant": "#c6c5d4",
+                "surface-container-low": "#f5f2fb",
+                "on-primary": "#ffffff",
+                "background": "#fbf8ff",
+                "tertiary-fixed-dim": "#ffb5a1",
+                "surface-variant": "#e4e1ea",
+                "surface-container": "#efecf5",
+                "on-tertiary": "#ffffff",
+                "surface": "#fbf8ff",
+                "tertiary-fixed": "#ffdbd1",
+                "primary-fixed": "#e0e0ff",
+                "on-secondary-fixed-variant": "#005312",
+                "inverse-primary": "#bdc2ff",
+                "secondary-fixed": "#a3f69c",
+                "surface-container-lowest": "#ffffff",
+                "on-primary-fixed": "#000767",
+                "primary-fixed-dim": "#bdc2ff",
+                "on-tertiary-container": "#ff663c",
+                "on-background": "#1b1b21",
+                "surface-container-high": "#eae7ef",
+                "error": "#ba1a1a",
+                "error-container": "#ffdad6",
+                "inverse-surface": "#303036",
+                "surface-dim": "#dbd9e1",
+                "on-tertiary-fixed-variant": "#881f00",
+                "secondary": "#1b6d24",
+                "on-error": "#ffffff",
+                "on-primary-container": "#8690ee",
+                "surface-container-highest": "#e4e1ea",
+                "on-tertiary-fixed": "#3b0800",
+                "inverse-on-surface": "#f2eff8",
+                "on-secondary-fixed": "#002204",
+                "on-error-container": "#93000a",
+                "on-surface": "#1b1b21",
+                "on-primary-fixed-variant": "#343d96"
+              },
+              fontFamily: {
+                "headline": ["Manrope"],
+                "body": ["Inter"],
+                "label": ["Inter"]
+              },
+              borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .grid-pattern {
+            background-image: radial-gradient(circle, #c6c5d4 1px, transparent 1px);
+            background-size: 32px 32px;
+            opacity: 0.1;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl flex justify-between items-center px-10 h-20 w-full shadow-sm shadow-indigo-500/5">
+<div class="flex items-center gap-12">
+<span class="text-2xl font-black text-indigo-900 dark:text-indigo-100 font-headline tracking-tight">Sovereign Ledger</span>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-manrope tracking-tight font-bold text-indigo-700 dark:text-indigo-400 border-b-2 border-indigo-700 dark:border-indigo-400 pb-1 duration-300 ease-in-out" href="#">Observatory</a>
+<a class="font-manrope tracking-tight font-bold text-slate-500 dark:text-slate-400 hover:text-indigo-600 duration-300 ease-in-out" href="#">Analytics</a>
+<a class="font-manrope tracking-tight font-bold text-slate-500 dark:text-slate-400 hover:text-indigo-600 duration-300 ease-in-out" href="#">Methodology</a>
+<a class="font-manrope tracking-tight font-bold text-slate-500 dark:text-slate-400 hover:text-indigo-600 duration-300 ease-in-out" href="#">Archive</a>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="relative group">
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:bg-slate-50/50 p-2 rounded-full transition-colors">notifications</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:bg-slate-50/50 p-2 rounded-full transition-colors">settings</span>
+<div class="h-10 w-10 rounded-full bg-surface-container-high overflow-hidden border border-outline-variant/30">
+<img alt="User profile" class="w-full h-full object-cover" data-alt="professional portrait of a senior government official with a clean neutral background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuApfHhuJZ6gJ_H2xwfp_PLy3CHKu-KrpsL6vYXHFdb8rCQnhzlPy3QXP_IPxQsZ6rTFjULMyUmdcsgpXIPGGBe2SCt0d-ha6AMu3jLaV-0xaqd90_2jJo-gZ6Mx26tUppsmNM9zqkBnhd8fcRiej-y5cfFkgHLYnze5r-LU-XOlo3buyxZ5-g655vOIn5BsvTR_sk-HKqsDGAn7HEo6i1FNQdhh4yMeFFyc20X3_R7zra6k-hOO672EGZia-FFaz9C4X_EnnFln"/>
+</div>
+</div>
+</nav>
+<div class="flex min-h-screen pt-20">
+<!-- SideNavBar -->
+<aside class="h-screen w-72 flex-shrink-0 sticky top-20 bg-slate-50 dark:bg-slate-900 flex flex-col p-6 space-y-4 pt-12">
+<div class="mb-8">
+<div class="flex items-center gap-3 mb-2">
+<span class="material-symbols-outlined text-primary text-2xl" style="font-variation-settings: 'FILL' 1;">analytics</span>
+<span class="text-lg font-bold text-indigo-900 dark:text-white font-headline">State Insights</span>
+</div>
+<p class="text-xs text-slate-500 font-medium">Regional Breakdown</p>
+</div>
+<nav class="space-y-1 flex-grow">
+<a class="flex items-center gap-3 px-4 py-3 bg-white dark:bg-slate-800 text-indigo-700 dark:text-indigo-300 rounded-lg shadow-sm font-semibold active:scale-95 duration-200" href="#">
+<span class="material-symbols-outlined">groups</span>
+<span class="font-inter text-sm">Demographics</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800/50 hover:translate-x-1 transition-transform active:scale-95 duration-200" href="#">
+<span class="material-symbols-outlined">inventory_2</span>
+<span class="font-inter text-sm">Resources</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800/50 hover:translate-x-1 transition-transform active:scale-95 duration-200" href="#">
+<span class="material-symbols-outlined">payments</span>
+<span class="font-inter text-sm">Economy</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800/50 hover:translate-x-1 transition-transform active:scale-95 duration-200" href="#">
+<span class="material-symbols-outlined">eco</span>
+<span class="font-inter text-sm">Environment</span>
+</a>
+</nav>
+<div class="pt-6 mt-auto border-t border-outline-variant/20 space-y-1">
+<button class="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-primary to-primary-container text-on-primary py-3 rounded-lg font-bold text-sm mb-4 active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-sm">download</span>
+                    Export Report
+                </button>
+<a class="flex items-center gap-3 px-4 py-2 text-slate-500 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">description</span>
+<span class="text-sm font-medium">Documentation</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 text-slate-500 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">help</span>
+<span class="text-sm font-medium">Support</span>
+</a>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-grow relative overflow-hidden bg-surface">
+<div class="grid-pattern absolute inset-0 pointer-events-none"></div>
+<div class="relative px-12 py-12 max-w-7xl mx-auto space-y-12">
+<!-- Header -->
+<header class="max-w-3xl space-y-3">
+<h1 class="text-5xl font-extrabold font-headline tracking-tighter text-on-background">
+                        National Data Overview
+                    </h1>
+<p class="text-lg text-on-surface-variant leading-relaxed">
+                        Strategic summary of India's demographic and resource landscape from 2011 to 2051. 
+                        A longitudinal assessment of sovereign assets and vulnerabilities.
+                    </p>
+</header>
+<!-- Key Metrics -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="bg-surface-container-lowest p-10 rounded-xl shadow-sm shadow-on-surface/5 flex flex-col justify-between">
+<div>
+<span class="text-xs font-bold uppercase tracking-widest text-secondary font-label mb-2 block">Total Population</span>
+<div class="text-5xl font-black font-headline text-primary">1.21B</div>
+</div>
+<div class="mt-8 flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">trending_up</span>
+<span class="text-sm font-medium">Census 2011 Data</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-10 rounded-xl shadow-sm shadow-on-surface/5 flex flex-col justify-between">
+<div>
+<span class="text-xs font-bold uppercase tracking-widest text-secondary font-label mb-2 block">Urbanization Rate</span>
+<div class="text-5xl font-black font-headline text-primary">31%</div>
+</div>
+<div class="mt-8 flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-primary-container">domain</span>
+<span class="text-sm font-medium">Rising to 50% by 2051</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-10 rounded-xl shadow-sm shadow-on-surface/5 flex flex-col justify-between">
+<div>
+<span class="text-xs font-bold uppercase tracking-widest text-tertiary-container font-label mb-2 block">Water Stressed</span>
+<div class="text-5xl font-black font-headline text-tertiary-container">600M</div>
+</div>
+<div class="mt-8 flex items-center gap-2 text-tertiary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">warning</span>
+<span class="text-sm font-medium">Immediate Policy Focus</span>
+</div>
+</div>
+</section>
+<!-- Interactive Map Visualization -->
+<section class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<div class="lg:col-span-2 bg-surface-container rounded-xl overflow-hidden relative min-h-[600px] flex flex-col">
+<div class="p-8 absolute top-0 left-0 z-10 bg-surface/80 backdrop-blur-md rounded-br-xl">
+<h3 class="text-xl font-bold font-headline text-primary mb-1">Density Hotspots</h3>
+<p class="text-xs font-medium text-on-surface-variant uppercase tracking-tighter">Live Spatial Projection</p>
+</div>
+<div class="flex-grow w-full h-full grayscale opacity-80 group">
+<img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" data-alt="highly detailed topographic map of India with abstract heat patterns overlaying major metropolitan centers like Mumbai, Delhi, and Bengaluru" data-location="India" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVXj3aPAD03hbPrxMcZk-y8S6lOgaXFhEz2rg49if3mYgm_4NHCXXR4HEbiIXjA1pQt1VujjqJO1UjAtdD8COoEK6r9kfBc9jPNOg8m1qS77TsDiYUsB44RzfF7QToFEsgAdnnp-un8CCgsiaPEjqffl399Et2sFdfeQ-rj5x2QgU-azgq8bemXnYii_O_N3-dGMSLH37rPwFSv-i2YYXuVdiwoo40yV5weFXVv4wjAjFWF28k8rEc0ffLVB8bg3DJPoOhhCsR"/>
+</div>
+<div class="absolute bottom-8 right-8 z-10 space-y-2">
+<div class="bg-surface p-4 rounded-lg shadow-xl backdrop-blur-xl border border-outline-variant/10">
+<div class="flex items-center gap-4 mb-3">
+<div class="h-3 w-3 rounded-full bg-tertiary-container"></div>
+<span class="text-xs font-bold">Critical Scarcity</span>
+</div>
+<div class="flex items-center gap-4 mb-3">
+<div class="h-3 w-3 rounded-full bg-primary"></div>
+<span class="text-xs font-bold">High Density</span>
+</div>
+<div class="flex items-center gap-4">
+<div class="h-3 w-3 rounded-full bg-secondary"></div>
+<span class="text-xs font-bold">Resilient Zones</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Resource Scarcity Alert -->
+<div class="flex flex-col gap-8">
+<div class="bg-tertiary-container/5 p-10 rounded-xl border border-tertiary-container/10 flex flex-col justify-between h-full">
+<div class="space-y-6">
+<div class="flex items-center gap-3 text-tertiary-container">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">water_drop</span>
+<h3 class="text-2xl font-black font-headline tracking-tight">Resource Alert</h3>
+</div>
+<div class="space-y-2">
+<div class="text-5xl font-black text-tertiary-container">40%</div>
+<p class="text-lg font-bold text-tertiary leading-snug">Projected Water Deficiency by 2030</p>
+</div>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+                                    Demand is projected to outstrip supply by a factor of 2:1. Impact will be most severe in the Indo-Gangetic plains and Peninsular India.
+                                </p>
+</div>
+<div class="pt-8">
+<button class="text-sm font-bold text-tertiary-container border-b-2 border-tertiary-container pb-1 hover:opacity-70 transition-opacity">
+                                    View Mitigation Protocol
+                                </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Demographic Shift & Agricultural Transformation -->
+<section class="grid grid-cols-1 lg:grid-cols-2 gap-12 pt-12">
+<div class="space-y-8">
+<h2 class="text-3xl font-extrabold font-headline tracking-tight text-primary">Demographic Shift</h2>
+<div class="space-y-6">
+<!-- Decade Rows -->
+<div class="flex items-end gap-4 h-48">
+<div class="flex-1 group relative flex flex-col justify-end">
+<div class="bg-surface-container-high h-[40%] rounded-t-lg transition-all duration-300 group-hover:bg-primary/20"></div>
+<span class="mt-4 text-xs font-bold text-center">1991</span>
+</div>
+<div class="flex-1 group relative flex flex-col justify-end">
+<div class="bg-surface-container-high h-[55%] rounded-t-lg transition-all duration-300 group-hover:bg-primary/20"></div>
+<span class="mt-4 text-xs font-bold text-center">2001</span>
+</div>
+<div class="flex-1 group relative flex flex-col justify-end">
+<div class="bg-primary/60 h-[70%] rounded-t-lg"></div>
+<span class="mt-4 text-xs font-bold text-center text-primary">2011</span>
+</div>
+<div class="flex-1 group relative flex flex-col justify-end">
+<div class="bg-secondary/40 h-[85%] rounded-t-lg border-t-2 border-dashed border-secondary"></div>
+<span class="mt-4 text-xs font-bold text-center text-secondary">2031 (P)</span>
+</div>
+<div class="flex-1 group relative flex flex-col justify-end">
+<div class="bg-secondary/40 h-[100%] rounded-t-lg border-t-2 border-dashed border-secondary"></div>
+<span class="mt-4 text-xs font-bold text-center text-secondary">2051 (P)</span>
+</div>
+</div>
+<p class="text-sm text-on-surface-variant italic border-l-4 border-primary-fixed pl-4">
+                                Data reflects a transition from high fertility to replacement-level stability, with median age shifting from 24 to 37.
+                            </p>
+</div>
+</div>
+<div class="bg-surface-container-low p-10 rounded-xl space-y-8">
+<div class="flex justify-between items-start">
+<h2 class="text-2xl font-extrabold font-headline text-primary">Agricultural Transformation</h2>
+<span class="material-symbols-outlined text-secondary text-3xl">agriculture</span>
+</div>
+<div class="space-y-6">
+<div class="bg-white p-6 rounded-lg shadow-sm border border-outline-variant/10">
+<div class="flex justify-between items-center mb-3">
+<span class="font-bold text-primary">Punjab &amp; Haryana Corridor</span>
+<span class="text-xs font-bold text-secondary uppercase bg-secondary/10 px-2 py-1 rounded">Wheat Anchor</span>
+</div>
+<div class="w-full h-2 bg-surface-container rounded-full overflow-hidden mb-2">
+<div class="bg-secondary h-full w-[88%]"></div>
+</div>
+<div class="flex justify-between text-[10px] font-bold text-on-surface-variant">
+<span>SURPLUS CAPACITY</span>
+<span>88% OPTIMIZED</span>
+</div>
+</div>
+<div class="bg-white p-6 rounded-lg shadow-sm border border-outline-variant/10">
+<div class="flex justify-between items-center mb-3">
+<span class="font-bold text-primary">West Bengal Plains</span>
+<span class="text-xs font-bold text-secondary uppercase bg-secondary/10 px-2 py-1 rounded">Rice Anchor</span>
+</div>
+<div class="w-full h-2 bg-surface-container rounded-full overflow-hidden mb-2">
+<div class="bg-secondary h-full w-[72%]"></div>
+</div>
+<div class="flex justify-between text-[10px] font-bold text-on-surface-variant">
+<span>YIELD INTENSITY</span>
+<span>72% SUSTAINABLE</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Workforce Dynamics -->
+<section class="bg-on-background text-surface p-12 rounded-xl relative overflow-hidden">
+<div class="absolute top-0 right-0 w-1/2 h-full opacity-10">
+<img class="w-full h-full object-cover" data-alt="abstract motion blur of a busy metropolitan intersection at night with trails of light representing migration paths" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDs-6S98f96edYxz8wev3hqxShyuSTIYBZnkpi9AYmJe2sr6r6y28jNblPQZgIeG9rvgwRiAJ8zVymIpnq3vkW4JqeAXakxehzw7RGp6apYQHNj_2mDictKC5piMs-aDYpWlEfm8xojMDsZqzFo43VlBRvzhdo3L6b4oBOAXf3YICUbqlPM3GDrLP0IcoOnKq4iEYFr43Mps0XwNU9RYAYD-ery4l25uXIWemze540ZHdVdX5dgNGhX1AwTng0Q2SFyPeh07ZJJ"/>
+</div>
+<div class="relative z-10 max-w-2xl space-y-6">
+<h2 class="text-3xl font-extrabold font-headline">Workforce Dynamics</h2>
+<p class="text-surface/70 text-lg">
+                            The Great Internal Migration: Quantifying the movement of human capital from the northern heartland to southern economic hubs.
+                        </p>
+<div class="grid grid-cols-2 gap-8 pt-6">
+<div class="space-y-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-error">logout</span>
+<span class="font-bold uppercase tracking-widest text-[10px]">Primary Source States</span>
+</div>
+<p class="text-2xl font-bold font-headline">UP &amp; Bihar</p>
+<p class="text-sm opacity-60">Providing 45% of nationwide construction &amp; service labor.</p>
+</div>
+<div class="space-y-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary-fixed">login</span>
+<span class="font-bold uppercase tracking-widest text-[10px]">Primary Destination Hubs</span>
+</div>
+<p class="text-2xl font-bold font-headline">Mumbai &amp; Bengaluru</p>
+<p class="text-sm opacity-60">Absorbing 12M+ seasonal workers annually.</p>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+</div>
+<!-- Contextual FAB -->
+<button class="fixed bottom-10 right-10 h-16 w-16 bg-primary text-on-primary rounded-full shadow-2xl flex items-center justify-center hover:scale-110 active:scale-95 transition-all group z-[100]">
+<span class="material-symbols-outlined text-3xl">insights</span>
+<span class="absolute right-20 bg-primary text-on-primary px-4 py-2 rounded-lg text-sm font-bold opacity-0 group-hover:opacity-100 whitespace-nowrap transition-opacity pointer-events-none">
+            Generate Insight Report
+        </span>
+</button>
+</body></html>

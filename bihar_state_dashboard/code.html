@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Bihar State Observatory | The Sovereign Ledger</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary-container": "#5f1300",
+              "on-primary": "#ffffff",
+              "surface-variant": "#e4e1ea",
+              "primary": "#000666",
+              "on-primary-fixed": "#000767",
+              "secondary-fixed-dim": "#88d982",
+              "surface-container": "#efecf5",
+              "on-background": "#1b1b21",
+              "inverse-primary": "#bdc2ff",
+              "on-secondary-fixed": "#002204",
+              "on-primary-fixed-variant": "#343d96",
+              "error": "#ba1a1a",
+              "surface-container-lowest": "#ffffff",
+              "secondary": "#1b6d24",
+              "on-tertiary-fixed-variant": "#881f00",
+              "tertiary-fixed": "#ffdbd1",
+              "outline-variant": "#c6c5d4",
+              "outline": "#767683",
+              "tertiary-fixed-dim": "#ffb5a1",
+              "on-secondary-container": "#217128",
+              "inverse-surface": "#303036",
+              "on-error-container": "#93000a",
+              "surface-tint": "#4c56af",
+              "on-error": "#ffffff",
+              "background": "#fbf8ff",
+              "secondary-fixed": "#a3f69c",
+              "on-tertiary": "#ffffff",
+              "on-secondary-fixed-variant": "#005312",
+              "primary-fixed": "#e0e0ff",
+              "surface-container-low": "#f5f2fb",
+              "on-surface-variant": "#454652",
+              "surface-dim": "#dbd9e1",
+              "surface-container-high": "#eae7ef",
+              "primary-fixed-dim": "#bdc2ff",
+              "on-tertiary-fixed": "#3b0800",
+              "on-tertiary-container": "#ff663c",
+              "tertiary": "#3a0800",
+              "on-secondary": "#ffffff",
+              "surface-bright": "#fbf8ff",
+              "surface": "#fbf8ff",
+              "secondary-container": "#a0f399",
+              "primary-container": "#1a237e",
+              "surface-container-highest": "#e4e1ea",
+              "inverse-on-surface": "#f2eff8",
+              "error-container": "#ffdad6",
+              "on-primary-container": "#8690ee",
+              "on-surface": "#1b1b21"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-panel {
+        backdrop-filter: blur(40px);
+        -webkit-backdrop-filter: blur(40px);
+      }
+      .grid-bg {
+        background-image: radial-gradient(circle, #c6c5d4 1px, transparent 1px);
+        background-size: 32px 32px;
+        opacity: 0.1;
+      }
+    </style>
+</head>
+<body class="bg-background font-body text-on-surface">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl flex justify-between items-center px-8 h-16 w-full shadow-[0px_12px_32px_rgba(26,35,126,0.06)]">
+<div class="flex items-center gap-4">
+<span class="text-xl font-black text-indigo-950 dark:text-white tracking-tighter">The Sovereign Ledger</span>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<nav class="flex gap-6 text-indigo-900 dark:text-indigo-400 font-['Manrope'] font-bold tracking-tight text-lg">
+<a class="text-indigo-700 dark:text-indigo-300 font-semibold" href="#">State Overview</a>
+<a class="text-slate-500 dark:text-slate-400 hover:bg-slate-100/50 dark:hover:bg-slate-800/50 transition-colors px-2 rounded" href="#">National Ledger</a>
+<a class="text-slate-500 dark:text-slate-400 hover:bg-slate-100/50 dark:hover:bg-slate-800/50 transition-colors px-2 rounded" href="#">Global Trends</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 rounded-full hover:bg-slate-100/50 transition-colors">
+<span class="material-symbols-outlined text-indigo-900">notifications</span>
+</button>
+<button class="p-2 rounded-full hover:bg-slate-100/50 transition-colors">
+<span class="material-symbols-outlined text-indigo-900">account_circle</span>
+</button>
+</div>
+</header>
+<!-- SideNavBar -->
+<aside class="h-screen w-72 fixed left-0 top-0 z-40 bg-slate-50 dark:bg-slate-950 flex flex-col py-20 px-4 space-y-2 tonal-layering bg-surface-container-high hidden md:flex">
+<div class="mb-8 px-4">
+<div class="flex items-center gap-3 mb-2">
+<div class="w-10 h-10 rounded-lg bg-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary-container" style="font-variation-settings: 'FILL' 1;">account_balance</span>
+</div>
+<div>
+<h3 class="font-headline font-bold text-primary leading-tight">Bihar Observatory</h3>
+<p class="text-xs text-outline font-medium uppercase tracking-widest">Regional Ledger</p>
+</div>
+</div>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 text-indigo-900 dark:text-indigo-200 font-bold border-r-4 border-indigo-600 bg-indigo-50/50 dark:bg-indigo-900/20 transition-all font-['Inter'] text-sm uppercase tracking-wider" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+<span>State Overview</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-indigo-50 dark:hover:bg-indigo-900/10 transition-all font-['Inter'] text-sm uppercase tracking-wider" href="#">
+<span class="material-symbols-outlined">groups</span>
+<span>Demographics</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-indigo-50 dark:hover:bg-indigo-900/10 transition-all font-['Inter'] text-sm uppercase tracking-wider" href="#">
+<span class="material-symbols-outlined">inventory_2</span>
+<span>Resources</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-indigo-50 dark:hover:bg-indigo-900/10 transition-all font-['Inter'] text-sm uppercase tracking-wider" href="#">
+<span class="material-symbols-outlined">architecture</span>
+<span>Infrastructure</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-indigo-50 dark:hover:bg-indigo-900/10 transition-all font-['Inter'] text-sm uppercase tracking-wider" href="#">
+<span class="material-symbols-outlined">history_edu</span>
+<span>Policy Ledger</span>
+</a>
+</nav>
+<div class="pt-4 border-t border-outline-variant/20 space-y-1">
+<button class="w-full flex items-center gap-3 px-4 py-3 text-slate-600 font-['Inter'] text-sm uppercase tracking-wider hover:bg-indigo-50 transition-all">
+<span class="material-symbols-outlined">settings</span>
+<span>Settings</span>
+</button>
+<button class="w-full flex items-center gap-3 px-4 py-3 text-slate-600 font-['Inter'] text-sm uppercase tracking-wider hover:bg-indigo-50 transition-all">
+<span class="material-symbols-outlined">help_outline</span>
+<span>Support</span>
+</button>
+</div>
+<div class="mt-6 px-4">
+<button class="w-full py-3 bg-primary text-on-primary rounded-lg font-bold text-xs uppercase tracking-widest shadow-lg shadow-primary/20 hover:scale-[0.98] transition-transform">
+                Export State Report
+            </button>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="md:ml-72 pt-24 pb-12 px-8 min-h-screen relative overflow-hidden">
+<div class="absolute inset-0 grid-bg -z-10"></div>
+<!-- Hero Header -->
+<header class="mb-12 max-w-5xl">
+<span class="inline-block px-3 py-1 bg-primary-container text-on-primary-container text-[10px] font-bold uppercase tracking-[0.2em] rounded-sm mb-4">Strategic Observatory</span>
+<h1 class="text-5xl md:text-6xl font-headline font-extrabold text-primary tracking-tight leading-[1.1] mb-6">
+                Bihar State Observatory: <span class="text-on-tertiary-container">Demographic Surge</span> &amp; Resource Density.
+            </h1>
+<p class="text-lg text-on-surface-variant max-w-2xl font-body leading-relaxed">
+                Analyzing the socio-economic equilibrium of India's most densely populated landscape. This ledger tracks the intersection of agricultural output, human capital, and critical resource scarcity.
+            </p>
+</header>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 max-w-7xl">
+<!-- Quick Stats Row -->
+<div class="md:col-span-4 bg-surface-container-lowest p-10 rounded-xl shadow-[0px_12px_32px_rgba(26,35,126,0.06)] flex flex-col justify-between border-l-4 border-primary">
+<div>
+<p class="text-xs font-label font-bold text-outline uppercase tracking-widest mb-1">Total Population (2011)</p>
+<h2 class="text-5xl font-headline font-extrabold text-primary tracking-tighter">~104.1M</h2>
+</div>
+<div class="mt-8 space-y-4">
+<div class="flex justify-between items-end border-b border-outline-variant/10 pb-2">
+<span class="text-sm font-medium text-on-surface-variant">Density (km²)</span>
+<span class="text-xl font-bold text-primary">1,106</span>
+</div>
+<div class="flex justify-between items-end border-b border-outline-variant/10 pb-2">
+<span class="text-sm font-medium text-on-surface-variant">Literacy Rate</span>
+<span class="text-xl font-bold text-tertiary-container">&lt; 70%</span>
+</div>
+</div>
+</div>
+<div class="md:col-span-8 bg-surface-container-lowest p-10 rounded-xl shadow-[0px_12px_32px_rgba(26,35,126,0.06)] relative overflow-hidden">
+<div class="relative z-10 flex flex-col h-full">
+<div class="flex justify-between items-start mb-10">
+<div>
+<p class="text-xs font-label font-bold text-outline uppercase tracking-widest mb-1">Demographic Forecast</p>
+<h3 class="text-2xl font-headline font-bold text-primary">Projection 2051</h3>
+</div>
+<span class="px-3 py-1 bg-secondary-container text-on-secondary-container text-[10px] font-bold rounded-full">#2 Most Populous Projection</span>
+</div>
+<div class="flex-1 flex items-end gap-2">
+<!-- Simplified Trend Line Chart with Divs -->
+<div class="w-full h-32 flex items-end justify-between gap-1 group">
+<div class="bg-primary/10 w-full h-1/4 rounded-t-sm transition-all hover:bg-primary/30"></div>
+<div class="bg-primary/20 w-full h-1/3 rounded-t-sm transition-all hover:bg-primary/40"></div>
+<div class="bg-primary/30 w-full h-1/2 rounded-t-sm transition-all hover:bg-primary/50"></div>
+<div class="bg-primary/50 w-full h-3/4 rounded-t-sm transition-all hover:bg-primary/70"></div>
+<div class="bg-primary w-full h-[95%] rounded-t-sm shadow-lg shadow-primary/20"></div>
+<div class="bg-on-tertiary-container w-full h-full rounded-t-sm shadow-lg shadow-on-tertiary-container/20"></div>
+</div>
+</div>
+<div class="flex justify-between mt-4 text-[10px] font-bold text-outline uppercase tracking-widest">
+<span>2011</span>
+<span>2021</span>
+<span>2031</span>
+<span>2041</span>
+<span>2051 EST.</span>
+</div>
+</div>
+<!-- Abstract visual element -->
+<div class="absolute -right-10 -bottom-10 opacity-5 pointer-events-none">
+<span class="material-symbols-outlined text-[200px]" style="font-variation-settings: 'wght' 700;">trending_up</span>
+</div>
+</div>
+<!-- Resource Integrity Scorecard -->
+<div class="md:col-span-7 bg-surface p-10 rounded-xl flex flex-col gap-8">
+<header>
+<h3 class="text-2xl font-headline font-bold text-primary mb-2">Resource Integrity Ledger</h3>
+<p class="text-sm text-on-surface-variant font-medium">Critical stress points in the regional resource architecture.</p>
+</header>
+<div class="space-y-8">
+<div class="group">
+<div class="flex justify-between mb-2 items-center">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary">water_drop</span>
+<span class="text-sm font-bold uppercase tracking-wide">Water Stress Index</span>
+</div>
+<span class="text-xs font-bold text-tertiary">CRITICAL</span>
+</div>
+<div class="h-1.5 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-tertiary w-[88%] rounded-full"></div>
+</div>
+<p class="text-xs mt-2 text-on-surface-variant">Groundwater depletion accelerating in north-western clusters.</p>
+</div>
+<div class="group">
+<div class="flex justify-between mb-2 items-center">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary">nutrition</span>
+<span class="text-sm font-bold uppercase tracking-wide">Nutrition Stability</span>
+</div>
+<span class="text-xs font-bold text-tertiary">HIGH ALERT</span>
+</div>
+<div class="h-1.5 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-on-tertiary-container w-[42%] rounded-full"></div>
+</div>
+<p class="text-xs mt-2 text-on-surface-variant">Malnutrition levels persist above national targets in rural districts.</p>
+</div>
+<div class="group">
+<div class="flex justify-between mb-2 items-center">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary">eco</span>
+<span class="text-sm font-bold uppercase tracking-wide">Agricultural Resilience</span>
+</div>
+<span class="text-xs font-bold text-secondary">MODERATE</span>
+</div>
+<div class="h-1.5 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-secondary w-[65%] rounded-full"></div>
+</div>
+<p class="text-xs mt-2 text-on-surface-variant">Rice yields remain high but land pressure is reducing plot viability.</p>
+</div>
+</div>
+</div>
+<!-- Migration & Economy -->
+<div class="md:col-span-5 bg-primary-container p-10 rounded-xl text-on-primary-container flex flex-col justify-between">
+<div>
+<span class="material-symbols-outlined text-4xl mb-4" style="font-variation-settings: 'FILL' 1;">flight_takeoff</span>
+<h3 class="text-3xl font-headline font-bold mb-4 text-white leading-tight">Economic Migration Dynamics</h3>
+<p class="text-on-primary-container/80 text-sm leading-relaxed mb-8">
+                        The "Out-Migration" phenomenon remains a primary economic stabilizer. Bihar accounts for one of the largest rural labor exports to Tier-1 metro hubs including Delhi, Mumbai, and Bengaluru.
+                    </p>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="p-4 bg-white/5 rounded-lg border border-white/10">
+<p class="text-[10px] uppercase font-bold opacity-60 mb-1">Rural Workforce</p>
+<p class="text-2xl font-headline font-bold text-white">~40%</p>
+<p class="text-[9px] opacity-60">Agri-centric</p>
+</div>
+<div class="p-4 bg-white/5 rounded-lg border border-white/10">
+<p class="text-[10px] uppercase font-bold opacity-60 mb-1">Primary Hubs</p>
+<p class="text-2xl font-headline font-bold text-white">Top 3</p>
+<p class="text-[9px] opacity-60">Del, Mum, Blr</p>
+</div>
+</div>
+</div>
+<!-- Agriculture Deep Dive -->
+<div class="md:col-span-12 grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+<div class="md:col-span-1 bg-surface-container-low p-10 rounded-xl flex flex-col gap-6">
+<div class="w-16 h-16 bg-secondary-container rounded-full flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">agriculture</span>
+</div>
+<h3 class="text-2xl font-headline font-bold text-primary">Agriculture Profile</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+                        Leading producer of rice and coarse grains. However, the sector is straining under extreme land pressure and diminishing farm sizes which hampers modernization efforts.
+                    </p>
+</div>
+<div class="md:col-span-2 relative h-[300px] rounded-xl overflow-hidden shadow-2xl">
+<img alt="Aerial view of green rice fields" class="w-full h-full object-cover" data-alt="Stunning aerial view of vibrant green rice terraces in Bihar with intricate patterns and soft afternoon light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqCFS81AP2zA7h25xR20U8CXRSiSXgHMwRUi91tdFnAaGiAuVqnoa7s3ueMkeZyvMjJ42Q3T6Wf_MCKZQp8dBHM4bOsEiChd_r4Q9e1qDYSwSuhftUxKHsmuQl_9gaaMEIEuH-JyddGvhatYLpEs0u8yKZ_EXPfOizyf_PSwEAtJDMNAn4ILy9g-y5irHD7-FjFUsE0SXcjpclWzsHN41cfcFgFQTtLm-uLPFW8ZyIkexCa6N-MStDzFW4LiQMP-OmoEG-s1n5"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex items-end p-10">
+<div class="flex gap-12 text-white">
+<div>
+<p class="text-[10px] font-bold uppercase tracking-widest opacity-70 mb-1">Rice Output</p>
+<p class="text-3xl font-headline font-extrabold tracking-tight">Top National Tier</p>
+</div>
+<div>
+<p class="text-[10px] font-bold uppercase tracking-widest opacity-70 mb-1">Avg Land Size</p>
+<p class="text-3xl font-headline font-extrabold tracking-tight">Decreasing</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Heatmap Section -->
+<section class="mt-16 max-w-7xl">
+<div class="bg-surface-container-lowest rounded-xl p-1 shadow-[0px_12px_32px_rgba(26,35,126,0.06)]">
+<div class="grid grid-cols-1 lg:grid-cols-2">
+<div class="p-10 lg:p-16 flex flex-col justify-center">
+<span class="text-xs font-bold text-tertiary-container uppercase tracking-widest mb-4">Spatial Intelligence</span>
+<h2 class="text-4xl font-headline font-extrabold text-primary mb-6 leading-tight">Water Stress &amp; Regional Scarcity</h2>
+<p class="text-on-surface-variant leading-relaxed mb-8">
+                            High-resolution mapping reveals clusters of significant groundwater depletion. Our predictive models suggest that without systemic intervention in irrigation infrastructure, the northern agricultural belt faces a 15% yield risk by 2030.
+                        </p>
+<div class="flex gap-4">
+<button class="px-6 py-3 bg-primary text-on-primary rounded-lg font-bold text-sm transition-transform active:scale-95 shadow-lg shadow-primary/20">Analyze Districts</button>
+<button class="px-6 py-3 bg-surface-container-high text-primary rounded-lg font-bold text-sm transition-transform active:scale-95">Download GIS Data</button>
+</div>
+</div>
+<div class="relative min-h-[400px] lg:min-h-full">
+<div class="absolute inset-0 bg-slate-200">
+<img alt="Map visual" class="w-full h-full object-cover" data-alt="Stylized topographic map with heat clusters representing resource density and population centers in shades of indigo and orange" data-location="Bihar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrdpysp-AtouGtpCUiFbdbgNJJNzTzhh24BJNX4aPSLwyu6_CzdQ2E-hyL2Hlghb375XihZz1qZU4q0U9pBHopaREPVIcSBG0trY2GnlTrxKOHwAf755jSZ6-ZXxbtu1cnJrCbR4p_rgNmcDG3x2Ci3MPsw8Gbt8ZrDcaAOczqTYAiXWnXU706e9cU5EjZh3xlVpzpfAEjaQUsdhIDwybclPqrYq3WZV6QXH3yjM6TJzWFtw-TFkmLGBeewb8Zk4uuDep9HvBO"/>
+</div>
+<div class="absolute top-6 right-6 p-4 glass-panel bg-white/70 rounded-lg shadow-xl border border-white/20">
+<h4 class="text-xs font-bold uppercase mb-3">Legend</h4>
+<div class="space-y-2">
+<div class="flex items-center gap-2">
+<div class="w-3 h-3 rounded-full bg-tertiary"></div>
+<span class="text-[10px] font-bold">High Stress</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-3 h-3 rounded-full bg-on-tertiary-container"></div>
+<span class="text-[10px] font-bold">Emerging Scarcity</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-3 h-3 rounded-full bg-secondary"></div>
+<span class="text-[10px] font-bold">Stable Hydrology</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer Policy Note -->
+<footer class="mt-24 pt-12 border-t border-outline-variant/20 flex flex-col md:flex-row justify-between items-start gap-8 opacity-60">
+<div class="max-w-md">
+<h4 class="font-headline font-bold text-primary mb-2">Data Integrity Disclosure</h4>
+<p class="text-xs leading-relaxed">
+                    This observatory leverages 2011 Census data paired with 2024 predictive demographic modeling. Agricultural indices are synthesized from state ministerial records and satellite-derived NDVI readings.
+                </p>
+</div>
+<div class="flex gap-12">
+<div>
+<h4 class="font-headline font-bold text-primary mb-2 text-xs uppercase tracking-widest">Authored By</h4>
+<p class="text-xs">Sovereign Ledger Analysis Group</p>
+</div>
+<div>
+<h4 class="font-headline font-bold text-primary mb-2 text-xs uppercase tracking-widest">Updated</h4>
+<p class="text-xs">Q3 - 2024 Archive</p>
+</div>
+</div>
+</footer>
+</main>
+<!-- Floating Action Button - suppressed as per mandate on details/dashboard focus -->
+</body></html>

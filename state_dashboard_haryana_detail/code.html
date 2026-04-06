@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Haryana: Demographic &amp; Resource Breakdown | The Sovereign Ledger</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-tertiary-fixed": "#3b0800",
+                        "on-primary-fixed": "#000767",
+                        "primary-container": "#1a237e",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-fixed": "#a3f69c",
+                        "surface-container-highest": "#e4e1ea",
+                        "surface-tint": "#4c56af",
+                        "secondary-container": "#a0f399",
+                        "on-secondary": "#ffffff",
+                        "background": "#fbf8ff",
+                        "primary": "#000666",
+                        "on-tertiary-fixed-variant": "#881f00",
+                        "on-primary-fixed-variant": "#343d96",
+                        "on-secondary-container": "#217128",
+                        "tertiary-container": "#5f1300",
+                        "on-secondary-fixed": "#002204",
+                        "primary-fixed": "#e0e0ff",
+                        "on-background": "#1b1b21",
+                        "surface-container-high": "#eae7ef",
+                        "tertiary-fixed-dim": "#ffb5a1",
+                        "surface-container": "#efecf5",
+                        "outline": "#767683",
+                        "on-tertiary": "#ffffff",
+                        "inverse-on-surface": "#f2eff8",
+                        "surface": "#fbf8ff",
+                        "on-primary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "tertiary": "#3a0800",
+                        "on-surface": "#1b1b21",
+                        "tertiary-fixed": "#ffdbd1",
+                        "outline-variant": "#c6c5d4",
+                        "on-surface-variant": "#454652",
+                        "inverse-surface": "#303036",
+                        "secondary-fixed-dim": "#88d982",
+                        "surface-bright": "#fbf8ff",
+                        "primary-fixed-dim": "#bdc2ff",
+                        "surface-variant": "#e4e1ea",
+                        "on-secondary-fixed-variant": "#005312",
+                        "on-tertiary-container": "#ff663c",
+                        "on-primary-container": "#8690ee",
+                        "inverse-primary": "#bdc2ff",
+                        "surface-container-low": "#f5f2fb",
+                        "on-error-container": "#93000a",
+                        "secondary": "#1b6d24",
+                        "error-container": "#ffdad6",
+                        "error": "#ba1a1a"
+                    },
+                    fontFamily: {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .tonal-layering-via-blur {
+            backdrop-filter: blur(20px);
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-image: radial-gradient(circle at 2px 2px, rgba(198, 197, 212, 0.15) 1px, transparent 0);
+            background-size: 40px 40px;
+        }
+        h1, h2, h3, .brand-font {
+            font-family: 'Manrope', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 border-b border-slate-200/20 dark:border-slate-800/20 bg-slate-50/80 dark:bg-slate-950/80 backdrop-blur-xl shadow-sm dark:shadow-none flex justify-between items-center px-8 h-16 w-full">
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-2xl" data-icon="account_balance">account_balance</span>
+<span class="text-xl font-extrabold text-indigo-900 dark:text-indigo-100 uppercase tracking-tighter">The Sovereign Ledger</span>
+</div>
+<nav class="hidden md:flex items-center ml-8 gap-6">
+<a class="text-slate-500 hover:bg-slate-100 transition-colors duration-200 px-3 py-1 rounded-lg text-sm font-medium" href="#">National Overview</a>
+<a class="text-indigo-700 font-bold px-3 py-1 rounded-lg text-sm" href="#">State Explorer</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative hidden sm:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-lg" data-icon="search">search</span>
+<input class="pl-10 pr-4 py-1.5 bg-surface-container-low border-none rounded-full text-sm focus:ring-2 focus:ring-primary/20 w-64" placeholder="Search jurisdictions..." type="text"/>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-2 rounded-full hover:bg-slate-100 transition-colors duration-200">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="notifications">notifications</span>
+</button>
+<button class="p-2 rounded-full hover:bg-slate-100 transition-colors duration-200">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="settings">settings</span>
+</button>
+<img alt="User profile avatar" class="w-8 h-8 rounded-full border border-outline-variant/30" data-alt="Professional headshot of a male data analyst in a clean studio setting with soft lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCI_la0kj6RJQK-kbI_kqTsOR2VjqMyfDtqfQn7c2Vff0xosWsIBbHUO_ZE00lJaSrk_WWHb2nvZyF1klg1FMc4l6CgkDRZu0UGjfwV6ocko16Axb--b_MNCbuulIjYceubTymuup8G3uUz4VQmAXL8p1w8Ln4nIW_QShWgL79vKL12QC1vqQRlXFeOcEAD-Eo-zn5RNTJfPRh_V76ZxS89DWpYeE-2V9KnNqspFq6CqTdE-5X5j-2GW00rHYgvLq40RArbGDKI"/>
+</div>
+</div>
+</header>
+<!-- SideNavBar -->
+<aside class="fixed left-0 top-16 h-[calc(100vh-64px)] w-64 border-r border-slate-200/10 dark:border-slate-800/10 bg-slate-50 dark:bg-slate-950 flex flex-col py-6 gap-y-2">
+<div class="px-6 mb-8">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-indigo-900 flex items-center justify-center text-white font-black">H</div>
+<div>
+<h3 class="font-manrope font-black text-indigo-900 dark:text-indigo-100 text-lg leading-tight">Haryana</h3>
+<p class="text-xs text-slate-500 font-medium">State Dashboard</p>
+</div>
+</div>
+</div>
+<nav class="flex-1 space-y-1 px-4">
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg font-inter text-sm font-medium bg-indigo-50 dark:bg-indigo-900/30 text-indigo-900 dark:text-indigo-100 border-r-4 border-indigo-600 dark:border-indigo-400 transition-all duration-300 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="map">map</span>
+<span>State Overview</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg font-inter text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-indigo-600 hover:bg-slate-100 transition-all duration-300 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="groups">groups</span>
+<span>Demographics</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg font-inter text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-indigo-600 hover:bg-slate-100 transition-all duration-300 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="water_drop">water_drop</span>
+<span>Water Resources</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg font-inter text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-indigo-600 hover:bg-slate-100 transition-all duration-300 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="agriculture">agriculture</span>
+<span>Agriculture</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg font-inter text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-indigo-600 hover:bg-slate-100 transition-all duration-300 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="payments">payments</span>
+<span>Economy</span>
+</a>
+</nav>
+<div class="px-4 mt-auto space-y-1">
+<button class="w-full bg-indigo-600 text-white py-2 rounded-lg text-sm font-bold mb-6 hover:bg-indigo-700 active:scale-95 transition-all">
+                Export Dataset
+            </button>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg font-inter text-sm font-medium text-slate-600 hover:text-indigo-600" href="#">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+<span>Support</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg font-inter text-sm font-medium text-slate-600 hover:text-indigo-600" href="#">
+<span class="material-symbols-outlined" data-icon="history">history</span>
+<span>Archive</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="ml-64 mt-16 p-10 min-h-screen">
+<!-- Header & Breadcrumbs -->
+<div class="mb-12">
+<nav class="flex items-center gap-2 text-xs font-semibold text-outline uppercase tracking-widest mb-4">
+<a class="hover:text-primary transition-colors" href="#">India Explorer</a>
+<span class="material-symbols-outlined text-xs" data-icon="chevron_right">chevron_right</span>
+<span class="text-on-surface-variant">North Region</span>
+<span class="material-symbols-outlined text-xs" data-icon="chevron_right">chevron_right</span>
+<span class="text-primary font-bold">Haryana</span>
+</nav>
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div>
+<h1 class="text-5xl font-extrabold text-primary tracking-tight mb-2">Haryana: Demographic &amp; Resource Breakdown</h1>
+<p class="text-on-surface-variant text-lg max-w-2xl font-body leading-relaxed">An institutional audit of the northwestern agricultural powerhouse, examining the interplay between rapid industrialization and environmental stress.</p>
+</div>
+<div class="flex items-center gap-2 text-sm font-bold text-secondary bg-secondary-container/20 px-4 py-2 rounded-lg">
+<span class="material-symbols-outlined text-sm" data-icon="verified" style="font-variation-settings: 'FILL' 1;">verified</span>
+                    Live Q4 2023 Ledger Status
+                </div>
+</div>
+</div>
+<!-- Key Metrics Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-5 gap-6 mb-12">
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm flex flex-col justify-between h-40">
+<p class="text-xs font-bold text-outline uppercase tracking-wider">Population</p>
+<h4 class="text-3xl font-black text-primary">25.3M</h4>
+<div class="h-1 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-primary w-3/4"></div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm flex flex-col justify-between h-40">
+<p class="text-xs font-bold text-outline uppercase tracking-wider">Literacy</p>
+<h4 class="text-3xl font-black text-primary">75.6%</h4>
+<p class="text-xs font-medium text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-xs" data-icon="trending_up">trending_up</span> +1.2% vs Prev
+                </p>
+</div>
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm flex flex-col justify-between h-40">
+<p class="text-xs font-bold text-outline uppercase tracking-wider">Density</p>
+<h4 class="text-3xl font-black text-primary">573<span class="text-sm font-normal text-outline">/km²</span></h4>
+<p class="text-xs font-medium text-on-surface-variant">Above National Avg</p>
+</div>
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm flex flex-col justify-between h-40">
+<p class="text-xs font-bold text-outline uppercase tracking-wider">Sex Ratio</p>
+<h4 class="text-3xl font-black text-tertiary">879</h4>
+<p class="text-xs font-medium text-tertiary flex items-center gap-1">
+<span class="material-symbols-outlined text-xs" data-icon="report">report</span> Critical Alert
+                </p>
+</div>
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm flex flex-col justify-between h-40">
+<p class="text-xs font-bold text-outline uppercase tracking-wider">CBR</p>
+<h4 class="text-3xl font-black text-primary">19.9</h4>
+<p class="text-xs font-medium text-on-surface-variant">Births per 1000</p>
+</div>
+</div>
+<!-- Section 1: Demographic Shift & Water Alert (Asymmetric Layout) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-12">
+<!-- Demographic Shift -->
+<div class="lg:col-span-7 bg-surface-container-low p-10 rounded-xl">
+<div class="flex items-center justify-between mb-8">
+<div>
+<span class="text-[10px] font-bold text-primary uppercase tracking-[0.2em] mb-1 block">Demographic Shift</span>
+<h2 class="text-3xl font-extrabold text-on-background tracking-tight">The Graying Dividend</h2>
+</div>
+<span class="material-symbols-outlined text-primary-container text-4xl opacity-40" data-icon="show_chart">show_chart</span>
+</div>
+<div class="flex flex-col md:flex-row gap-10">
+<div class="flex-1 space-y-6">
+<p class="text-on-surface-variant leading-relaxed">Haryana's youth dividend is entering a contraction phase. A significant spike in the <span class="text-primary font-bold">dependency ratio</span> is projected over the next decade as life expectancy climbs and birth rates stabilize.</p>
+<div class="space-y-4">
+<div class="flex justify-between items-center text-sm">
+<span class="font-medium">Youth Population (15-29)</span>
+<span class="font-bold text-primary">27%</span>
+</div>
+<div class="h-2 w-full bg-surface-container-highest rounded-full">
+<div class="h-full bg-primary w-[27%] rounded-full"></div>
+</div>
+<div class="flex justify-between items-center text-sm">
+<span class="font-medium">Projected Dependency Spike</span>
+<span class="font-bold text-tertiary-container">+14.2%</span>
+</div>
+<div class="h-2 w-full bg-surface-container-highest rounded-full">
+<div class="h-full bg-tertiary-container w-[65%] rounded-full"></div>
+</div>
+</div>
+</div>
+<div class="w-full md:w-48 bg-surface-container-lowest rounded-lg p-6 shadow-sm flex flex-col justify-center items-center text-center">
+<span class="material-symbols-outlined text-4xl text-tertiary-container mb-2" data-icon="warning">warning</span>
+<h5 class="text-xs font-black uppercase tracking-widest text-outline mb-1">Status</h5>
+<p class="text-sm font-bold text-tertiary-container">Transition Risk</p>
+</div>
+</div>
+</div>
+<!-- Water Resource Alert -->
+<div class="lg:col-span-5 relative overflow-hidden bg-primary-container rounded-xl p-10 text-white flex flex-col justify-between">
+<div class="relative z-10">
+<span class="text-[10px] font-bold text-primary-fixed-dim uppercase tracking-[0.2em] mb-2 block">Water Resource Alert</span>
+<h2 class="text-3xl font-extrabold tracking-tight mb-4">Critical Groundwater Depletion</h2>
+<p class="text-on-primary-container leading-relaxed mb-6">Overexploited aquifers are hitting a terminal threshold. Haryana currently extracts 137% of its annual replenishable groundwater.</p>
+<div class="bg-white/10 backdrop-blur-md rounded-lg p-4 mb-4">
+<div class="flex items-center gap-3 mb-2">
+<span class="material-symbols-outlined text-secondary-fixed" data-icon="water_drop">water_drop</span>
+<span class="text-sm font-bold">Extraction Rate: 137%</span>
+</div>
+<div class="w-full h-1.5 bg-white/20 rounded-full">
+<div class="h-full bg-secondary-fixed w-full"></div>
+</div>
+</div>
+</div>
+<div class="absolute bottom-0 right-0 w-64 h-64 bg-secondary-fixed/10 rounded-full -mr-20 -mb-20 blur-3xl"></div>
+<div class="relative z-10">
+<button class="flex items-center gap-2 text-sm font-bold text-secondary-fixed hover:gap-3 transition-all">
+                        View Depth Map <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Section 2: Agriculture & Economy (Bento Grid Style) -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+<!-- Agriculture Leader Card -->
+<div class="bg-surface-container-lowest rounded-xl p-10 shadow-sm border border-outline-variant/10">
+<div class="flex items-start justify-between mb-8">
+<div>
+<span class="text-[10px] font-bold text-secondary uppercase tracking-[0.2em] mb-1 block">Agriculture</span>
+<h3 class="text-2xl font-extrabold text-on-background">Cereal Hegemony</h3>
+</div>
+<div class="p-3 bg-secondary/10 rounded-full">
+<span class="material-symbols-outlined text-secondary" data-icon="agriculture">agriculture</span>
+</div>
+</div>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-6">Market leader in Wheat and Sugarcane production. However, 85% of total sown area faces extreme soil salinity and rising input costs.</p>
+<div class="space-y-3">
+<div class="flex justify-between p-3 rounded bg-surface-container-low">
+<span class="text-xs font-bold text-outline">Wheat Share</span>
+<span class="text-xs font-black text-primary">12% National</span>
+</div>
+<div class="flex justify-between p-3 rounded bg-surface-container-low">
+<span class="text-xs font-bold text-outline">Irrigation Coverage</span>
+<span class="text-xs font-black text-primary">84% of Total</span>
+</div>
+</div>
+</div>
+<!-- Economy Dashboard -->
+<div class="lg:col-span-2 bg-surface-container-high rounded-xl p-10 flex flex-col md:flex-row gap-8">
+<div class="flex-1">
+<span class="text-[10px] font-bold text-primary uppercase tracking-[0.2em] mb-1 block">Economy</span>
+<h3 class="text-3xl font-extrabold text-on-background mb-4 tracking-tight">Industrial Divergence</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-8">High industrial contribution from the Gurgaon-Manesar belt, yet a growing disconnect persists between services growth and local workforce participation.</p>
+<div class="grid grid-cols-2 gap-4">
+<div class="p-4 bg-surface-container-lowest rounded-lg">
+<h6 class="text-[10px] font-bold text-outline uppercase mb-1">GSDP Growth</h6>
+<p class="text-xl font-black text-primary">+8.2%</p>
+</div>
+<div class="p-4 bg-surface-container-lowest rounded-lg">
+<h6 class="text-[10px] font-bold text-outline uppercase mb-1">FDI Inflow</h6>
+<p class="text-xl font-black text-primary">$4.2B</p>
+</div>
+</div>
+</div>
+<div class="w-full md:w-72 relative rounded-xl overflow-hidden min-h-[200px]">
+<img alt="Urban skyline of Gurgaon" class="absolute inset-0 w-full h-full object-cover" data-alt="Modern high-rise office buildings in Gurgaon reflecting golden sunset light with a clean urban skyline" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcHe46IhnYKCNS_W4D6orLTr7-Y1JK0Pbpfdd7_Q6kopA7lq5ifq56mIclAbevFx9tHSj62gxoBnFvxIHskGarXr-RRjeMPIrG4fSC8T1Bm5r13pAJuxaRipPjskMiPo6eGZKWQic-eOxTMdzDHs2fScIZ_gbgn2WClHvnwJ6GxfX0jJPZPCX9i7v60nkuXYlV4EhopoFa03bxSU7yh3v3Ebeucdpzk21b4Xt6lqXmVqj9m0tP3k6gmp_PTi_sRZuaOrvcq7ro"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex flex-col justify-end p-6">
+<p class="text-xs font-bold text-white uppercase tracking-widest opacity-80 mb-1">Service Hub</p>
+<h4 class="text-white font-extrabold text-lg">The Millennium Corridor</h4>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive Map Section (Simplified representation) -->
+<div class="bg-surface-container-lowest rounded-xl p-10 shadow-sm mb-12">
+<div class="flex items-center justify-between mb-8">
+<div>
+<h3 class="text-2xl font-extrabold text-on-background tracking-tight">Spatial Infrastructure Ledger</h3>
+<p class="text-on-surface-variant text-sm">Visualizing the corridor between NCR and the hinterlands.</p>
+</div>
+<div class="flex gap-2">
+<button class="px-4 py-2 bg-surface-container-high text-xs font-bold rounded-lg hover:bg-surface-container-highest transition-colors">Districts</button>
+<button class="px-4 py-2 bg-primary text-white text-xs font-bold rounded-lg">Industrial Clusters</button>
+</div>
+</div>
+<div class="aspect-video bg-surface-variant rounded-lg relative overflow-hidden group">
+<!-- Map Background -->
+<img alt="State map of Haryana" class="absolute inset-0 w-full h-full object-cover grayscale opacity-30 mix-blend-multiply" data-alt="Abstract aerial satellite map of Haryana region showing agricultural patterns and urban clusters in muted earthy tones" data-location="Haryana" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3m_Lq3yKlridcRKLYfqjgwJ72_q6fq4WzSojlgqiqdXcNIbmNV2q8orog1r-3yvCDS53x458BFHCKcBIyF_lVl-NQSWSJeyPzKmkMjUT8aht7uQ5q7qR5c1KbBfvdwESTNulLyuH_6IzPHqGB00GQiz4xhCwpv7_eGPeojXpG3gNhP9HS_rnUdY-FiGk7tWDcgOlgOztT65KBwO5zCUJHBZRrJY6Mw-NePNAgPd8-AHkYF5h1-L9w5sEdLQbO3IYEMdjPfPRe"/>
+<!-- Grid Overlay -->
+<div class="absolute inset-0" style="background-image: radial-gradient(circle at 1px 1px, rgba(0,0,0,0.05) 1px, transparent 0); background-size: 20px 20px;"></div>
+<!-- Map Markers -->
+<div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2">
+<div class="relative flex items-center justify-center">
+<div class="w-12 h-12 bg-primary/20 rounded-full animate-ping absolute"></div>
+<div class="w-4 h-4 bg-primary rounded-full relative z-10 border-2 border-white"></div>
+<div class="absolute top-6 left-6 bg-white/90 backdrop-blur p-3 rounded-lg shadow-xl min-w-[140px] border border-outline-variant/20">
+<p class="text-[10px] font-bold text-outline uppercase tracking-tighter">Cluster Focus</p>
+<p class="text-sm font-black text-primary">Gurgaon-Manesar</p>
+<div class="mt-2 pt-2 border-t border-outline-variant/20 flex justify-between text-[10px] font-bold">
+<span>Output</span>
+<span class="text-secondary">Optimal</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer / Signature -->
+<footer class="mt-20 pt-8 border-t border-outline-variant/10 flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="flex items-center gap-4">
+<span class="text-xs font-black text-indigo-900/50 uppercase tracking-[0.3em]">The Sovereign Ledger</span>
+<span class="w-8 h-[1px] bg-outline-variant"></span>
+<span class="text-[10px] font-medium text-outline uppercase">Institutional Data Protocol 2024</span>
+</div>
+<div class="flex gap-8 text-xs font-bold text-outline">
+<a class="hover:text-primary transition-colors uppercase tracking-widest" href="#">Privacy Policy</a>
+<a class="hover:text-primary transition-colors uppercase tracking-widest" href="#">Data Methodology</a>
+<a class="hover:text-primary transition-colors uppercase tracking-widest" href="#">Contact Observatory</a>
+</div>
+</footer>
+</main>
+<!-- Floating Action Button (Suppressed as per rules for detailed context) -->
+<!-- The FAB is not rendered here to prioritize the Content Canvas on a Detailed page -->
+</body></html>
