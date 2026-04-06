@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>The Sovereign Ledger | India Population & Resource Observatory 2011–2051</title>
+    <meta name="description" content="India's premier institutional data observatory tracking population dynamics, resource sovereignty, and demographic transitions from 2011 to 2051."/>
+    <link rel="stylesheet" href="styles.css"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#000666", "primary-container": "#1a237e", "primary-fixed": "#e0e0ff", "primary-fixed-dim": "#bdc2ff",
+                        "on-primary": "#ffffff", "on-primary-container": "#8690ee", "on-primary-fixed": "#000767",
+                        "secondary": "#1b6d24", "secondary-container": "#a0f399", "secondary-fixed": "#a3f69c", "secondary-fixed-dim": "#88d982",
+                        "on-secondary-container": "#217128",
+                        "tertiary": "#3a0800", "tertiary-container": "#5f1300", "tertiary-fixed": "#ffdbd1", "tertiary-fixed-dim": "#ffb5a1",
+                        "on-tertiary-container": "#ff663c", "on-tertiary-fixed-variant": "#881f00",
+                        "error": "#ba1a1a", "error-container": "#ffdad6",
+                        "surface": "#fbf8ff", "surface-container-lowest": "#ffffff", "surface-container-low": "#f5f2fb",
+                        "surface-container": "#efecf5", "surface-container-high": "#eae7ef", "surface-container-highest": "#e4e1ea",
+                        "surface-dim": "#dbd9e1", "surface-variant": "#e4e1ea",
+                        "on-surface": "#1b1b21", "on-surface-variant": "#454652", "on-background": "#1b1b21",
+                        "outline": "#767683", "outline-variant": "#c6c5d4",
+                        "inverse-surface": "#303036", "inverse-on-surface": "#f2eff8", "inverse-primary": "#bdc2ff"
+                    },
+                    fontFamily: { "headline": ["Manrope"], "body": ["Inter"], "label": ["Inter"] },
+                    borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-surface text-on-surface">
+
+<!-- ═══ TOP NAVIGATION ═══ -->
+<nav class="top-nav">
+    <div class="nav-inner">
+        <a href="index.html" class="brand">The Sovereign Ledger</a>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="national-overview.html">National Overview</a></li>
+            <li><a href="state-dashboards.html">State Dashboards</a></li>
+            <li><a href="water-resources.html">Water Resources</a></li>
+            <li><a href="demographics.html">Demographics</a></li>
+        </ul>
+        <button class="hamburger" onclick="document.getElementById('mobileMenu').classList.toggle('open')">
+            <span class="material-symbols-outlined">menu</span>
+        </button>
+    </div>
+</nav>
+<div id="mobileMenu" class="mobile-menu">
+    <a href="index.html" class="active">Home</a>
+    <a href="national-overview.html">National Overview</a>
+    <a href="state-dashboards.html">State Dashboards</a>
+    <a href="water-resources.html">Water Resources</a>
+    <a href="demographics.html">Demographics</a>
+</div>
+
+<!-- ═══ HERO SECTION ═══ -->
+<main style="padding-top: 72px;">
+    <section style="position: relative; padding: 4rem 0; overflow: hidden;">
+        <div class="grid-bg" style="position: absolute; inset: 0;"></div>
+        <div class="container" style="display: grid; grid-template-columns: 1fr 1.4fr; gap: 3rem; align-items: center;">
+            <!-- Hero Text -->
+            <div style="position: relative; z-index: 10;">
+                <span class="label-md" style="display: inline-block; padding: 0.375rem 1rem; margin-bottom: 1.5rem; background: var(--primary-fixed); color: var(--primary); border-radius: 999px;">Institutional Intelligence · Est. 2024</span>
+                <h1 class="font-headline" style="font-size: clamp(2.5rem, 5vw, 4.25rem); font-weight: 800; color: var(--primary); line-height: 1.08; letter-spacing: -0.03em; margin-bottom: 1.5rem;">
+                    India's Socio-Demographic & Resource Landscape
+                    <span style="color: var(--outline);">2011–2051.</span>
+                </h1>
+                <p style="font-size: 1.1rem; color: var(--on-surface-variant); line-height: 1.7; max-width: 520px; margin-bottom: 2rem;">
+                    A longitudinal analytical framework mapping the intersection of population growth, resource scarcity, and demographic transformation across the subcontinent.
+                </p>
+                <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                    <a href="national-overview.html" class="btn-primary">Explore Trends <span class="material-symbols-outlined">trending_up</span></a>
+                    <a href="state-dashboards.html" class="btn-secondary">State Dashboards <span class="material-symbols-outlined">map</span></a>
+                </div>
+            </div>
+            <!-- Hero Map Visual -->
+            <div style="position: relative; height: 520px; background: var(--surface-container); border-radius: 1.5rem; overflow: hidden; box-shadow: 0 24px 48px rgba(26,35,126,0.1);">
+                <div style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(26,35,126,0.08), transparent);"></div>
+                <img alt="A demographic heatmap of India showing high population density hotspots in the North" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgjtptC-Y0k0ftFW0THT0JQfzRAYOSJPgmmJdCR4w9--CKlYVe8uIQJBio9eJxo566njjUGBEEDwz_8XrQRwli91zA6BA4N_Nh4s4FI61bciZ07UrkNw-B0AkasRa90141OVTSes1VlIlbmmUT5npDPO-e4rMKB2BNbvJYIQXZHWcOOCcFS47fPbLixpXVNmrzl7_dBYC4b-nve25qH2JeqdprdtZyV65ZUrM4EZpyEy2F3GJLvbhqMCeeBcBzp908tuTVdvGm" style="width: 100%; height: 100%; object-fit: cover; mix-blend-mode: multiply; opacity: 0.8;"/>
+                <!-- Map Controls Overlay -->
+                <div class="glass-panel" style="position: absolute; bottom: 1.5rem; left: 1.5rem; right: 1.5rem; padding: 1.25rem 1.5rem; border-radius: 1rem; display: flex; justify-content: space-between; align-items: center;">
+                    <div>
+                        <div class="font-headline" style="font-weight: 700; color: var(--primary); font-size: 0.9rem;">Population Density Map</div>
+                        <div class="label-sm" style="color: var(--on-surface-variant);">Live Census Overlay Analysis v3.1</div>
+                    </div>
+                    <div style="display: flex; gap: 0.5rem;">
+                        <button style="padding: 0.5rem; background: white; border: none; border-radius: 0.5rem; cursor: pointer; color: var(--primary);"><span class="material-symbols-outlined">zoom_in</span></button>
+                        <button style="padding: 0.5rem; background: white; border: none; border-radius: 0.5rem; cursor: pointer; color: var(--primary);"><span class="material-symbols-outlined">layers</span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ KEY STATS BAR ═══ -->
+    <section style="padding: 0 2.5rem; margin-top: -2rem; position: relative; z-index: 20;">
+        <div class="container" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; background: var(--surface-container-lowest); border-radius: 1.5rem; box-shadow: 0 16px 48px rgba(26,35,126,0.08); overflow: hidden;">
+            <!-- Stat 1 -->
+            <div style="padding: 2rem; display: flex; align-items: center; gap: 1.25rem; transition: background 0.3s;" onmouseover="this.style.background='var(--surface-container-low)'" onmouseout="this.style.background='transparent'">
+                <div style="width: 3.5rem; height: 3.5rem; display: flex; align-items: center; justify-content: center; background: var(--primary-fixed); border-radius: 1rem; color: var(--primary);">
+                    <span class="material-symbols-outlined" style="font-size: 1.5rem; font-variation-settings: 'FILL' 1;">groups</span>
+                </div>
+                <div>
+                    <div class="font-headline" style="font-size: 2rem; font-weight: 800; color: var(--primary); letter-spacing: -0.02em;">1.45B</div>
+                    <div class="label-sm" style="color: var(--on-surface-variant);">Population (2025 Est.)</div>
+                </div>
+            </div>
+            <!-- Stat 2 -->
+            <div style="padding: 2rem; display: flex; align-items: center; gap: 1.25rem; transition: background 0.3s;" onmouseover="this.style.background='var(--surface-container-low)'" onmouseout="this.style.background='transparent'">
+                <div style="width: 3.5rem; height: 3.5rem; display: flex; align-items: center; justify-content: center; background: var(--secondary-fixed); border-radius: 1rem; color: var(--secondary);">
+                    <span class="material-symbols-outlined" style="font-size: 1.5rem; font-variation-settings: 'FILL' 1;">location_city</span>
+                </div>
+                <div>
+                    <div class="font-headline" style="font-size: 2rem; font-weight: 800; color: var(--primary); letter-spacing: -0.02em;">36.8%</div>
+                    <div class="label-sm" style="color: var(--on-surface-variant);">Urbanization (2025)</div>
+                </div>
+            </div>
+            <!-- Stat 3 -->
+            <div style="padding: 2rem; display: flex; align-items: center; gap: 1.25rem; transition: background 0.3s;" onmouseover="this.style.background='var(--surface-container-low)'" onmouseout="this.style.background='transparent'">
+                <div style="width: 3.5rem; height: 3.5rem; display: flex; align-items: center; justify-content: center; background: var(--tertiary-fixed); border-radius: 1rem; color: var(--tertiary);">
+                    <span class="material-symbols-outlined" style="font-size: 1.5rem; font-variation-settings: 'FILL' 1;">water_drop</span>
+                </div>
+                <div>
+                    <div class="font-headline" style="font-size: 2rem; font-weight: 800; color: var(--primary); letter-spacing: -0.02em;">700M+</div>
+                    <div class="label-sm" style="color: var(--on-surface-variant);">Water Stressed</div>
+                </div>
+            </div>
+            <!-- Stat 4: 2051 Prediction -->
+            <div style="padding: 2rem; display: flex; align-items: center; gap: 1.25rem; background: var(--primary); border-radius: 0; color: white;">
+                <div style="width: 3.5rem; height: 3.5rem; display: flex; align-items: center; justify-content: center; background: rgba(255,255,255,0.15); border-radius: 1rem;">
+                    <span class="material-symbols-outlined" style="font-size: 1.5rem; font-variation-settings: 'FILL' 1;">schedule</span>
+                </div>
+                <div>
+                    <div class="font-headline" style="font-size: 2rem; font-weight: 800; letter-spacing: -0.02em;">1.66B</div>
+                    <div class="label-sm" style="opacity: 0.7;">Projected 2051</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ 2051 PREDICTIONS SECTION ═══ -->
+    <section style="padding: 5rem 0;">
+        <div class="container">
+            <div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 3rem;">
+                <div>
+                    <span class="label-md" style="color: var(--primary); display: block; margin-bottom: 0.5rem;">2051 Projections</span>
+                    <h2 class="font-headline" style="font-size: 2.5rem; font-weight: 800; color: var(--primary); letter-spacing: -0.02em;">The Road to 2051: What the Data Predicts</h2>
+                </div>
+                <a href="demographics.html" style="color: var(--primary); font-weight: 700; font-size: 0.8rem; text-decoration: none; text-transform: uppercase; letter-spacing: 0.1em; display: flex; align-items: center; gap: 0.5rem;">Full Analysis <span class="material-symbols-outlined" style="font-size: 1rem;">arrow_forward</span></a>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 2rem;">
+                <!-- Prediction Card 1 -->
+                <div class="card" style="border-left: 4px solid var(--primary); position: relative; overflow: hidden;">
+                    <div style="position: absolute; top: -1rem; right: -1rem; opacity: 0.05;">
+                        <span class="material-symbols-outlined" style="font-size: 6rem;">demography</span>
+                    </div>
+                    <div class="label-sm" style="color: var(--outline); margin-bottom: 1rem;">Population</div>
+                    <div class="font-headline" style="font-size: 2.5rem; font-weight: 800; color: var(--primary); margin-bottom: 0.25rem;">1.66B</div>
+                    <div style="font-size: 0.875rem; color: var(--on-surface-variant); margin-bottom: 1rem;">Peak population before projected decline. Growth rate slows to 0.3% annually.</div>
+                    <div style="display: flex; align-items: center; gap: 0.5rem;">
+                        <span style="font-size: 0.75rem; font-weight: 700; color: var(--secondary); display: flex; align-items: center; gap: 0.25rem;">
+                            <span class="material-symbols-outlined" style="font-size: 0.875rem;">trending_up</span> +14.5% from 2025
+                        </span>
+                    </div>
+                </div>
+                <!-- Prediction Card 2 -->
+                <div class="card" style="border-left: 4px solid var(--error); position: relative; overflow: hidden;">
+                    <div style="position: absolute; top: -1rem; right: -1rem; opacity: 0.05;">
+                        <span class="material-symbols-outlined" style="font-size: 6rem;">water_damage</span>
+                    </div>
+                    <div class="label-sm" style="color: var(--outline); margin-bottom: 1rem;">Water Security</div>
+                    <div class="font-headline" style="font-size: 2.5rem; font-weight: 800; color: var(--error); margin-bottom: 0.25rem;">40%</div>
+                    <div style="font-size: 0.875rem; color: var(--on-surface-variant); margin-bottom: 1rem;">Projected demand-supply gap. Per capita availability falls to 1,140 m³/yr — near scarcity.</div>
+                    <div style="display: flex; align-items: center; gap: 0.5rem;">
+                        <span style="font-size: 0.75rem; font-weight: 700; color: var(--error); display: flex; align-items: center; gap: 0.25rem;">
+                            <span class="material-symbols-outlined" style="font-size: 0.875rem;">warning</span> 6% GDP at risk
+                        </span>
+                    </div>
+                </div>
+                <!-- Prediction Card 3 -->
+                <div class="card" style="border-left: 4px solid var(--secondary); position: relative; overflow: hidden;">
+                    <div style="position: absolute; top: -1rem; right: -1rem; opacity: 0.05;">
+                        <span class="material-symbols-outlined" style="font-size: 6rem;">elderly</span>
+                    </div>
+                    <div class="label-sm" style="color: var(--outline); margin-bottom: 1rem;">Aging Population</div>
+                    <div class="font-headline" style="font-size: 2.5rem; font-weight: 800; color: var(--tertiary-container); margin-bottom: 0.25rem;">319M</div>
+                    <div style="font-size: 0.875rem; color: var(--on-surface-variant); margin-bottom: 1rem;">Indians over 60 by 2051 — nearly 20% of population. Southern states hit 31%.</div>
+                    <div style="display: flex; align-items: center; gap: 0.5rem;">
+                        <span style="font-size: 0.75rem; font-weight: 700; color: var(--on-tertiary-container); display: flex; align-items: center; gap: 0.25rem;">
+                            <span class="material-symbols-outlined" style="font-size: 0.875rem;">trending_up</span> +136% from 2025
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Prediction Row 2 -->
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                <!-- Energy -->
+                <div style="background: var(--surface-container-low); border-radius: 1.5rem; padding: 2.5rem; display: flex; gap: 2rem; align-items: center;">
+                    <div style="width: 5rem; height: 5rem; background: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--secondary); box-shadow: 0 4px 12px rgba(0,0,0,0.06);">
+                        <span class="material-symbols-outlined" style="font-size: 2rem; font-variation-settings: 'FILL' 1;">bolt</span>
+                    </div>
+                    <div>
+                        <div class="font-headline" style="font-weight: 700; font-size: 1.25rem; color: var(--primary); margin-bottom: 0.25rem;">Energy Demand: 3× by 2050</div>
+                        <div style="font-size: 0.875rem; color: var(--on-surface-variant); line-height: 1.6;">India will require US$7 trillion investment to meet energy demands. Renewable target: 500GW by 2030, 80% of grid by 2050.</div>
+                        <div style="margin-top: 0.5rem; font-size: 0.625rem; color: var(--outline); text-transform: uppercase; letter-spacing: 0.1em;">Source: Wood Mackenzie, IEA World Energy Outlook</div>
+                    </div>
+                </div>
+                <!-- Food Security -->
+                <div style="background: var(--surface-container-low); border-radius: 1.5rem; padding: 2.5rem; display: flex; gap: 2rem; align-items: center;">
+                    <div style="width: 5rem; height: 5rem; background: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--primary); box-shadow: 0 4px 12px rgba(0,0,0,0.06);">
+                        <span class="material-symbols-outlined" style="font-size: 2rem; font-variation-settings: 'FILL' 1;">agriculture</span>
+                    </div>
+                    <div>
+                        <div class="font-headline" style="font-weight: 700; font-size: 1.25rem; color: var(--primary); margin-bottom: 0.25rem;">Food Production at Risk: –16%</div>
+                        <div style="font-size: 0.875rem; color: var(--on-surface-variant); line-height: 1.6;">Climate-induced heat stress may cut agricultural yields by 16% by 2050.  Green Revolution gains are plateauing.</div>
+                        <div style="margin-top: 0.5rem; font-size: 0.625rem; color: var(--outline); text-transform: uppercase; letter-spacing: 0.1em;">Source: Down To Earth, IARI, World Bank Climate Report 2024</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ DEMOGRAPHIC SHIFT + RESOURCE SCARCITY ═══ -->
+    <section style="padding: 4rem 0;">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 1.5rem;">
+                <!-- The Demographic Shift -->
+                <div class="card-flush" style="position: relative; overflow: hidden;">
+                    <div style="position: absolute; top: 0; right: 0; width: 16rem; height: 16rem; background: rgba(0,6,102,0.04); border-radius: 50%; margin-right: -5rem; margin-top: -5rem;"></div>
+                    <div style="position: relative; z-index: 10; display: flex; gap: 3rem;">
+                        <div style="flex: 1;">
+                            <span class="label-sm" style="color: var(--primary); margin-bottom: 0.75rem; display: block;">Structural Analysis</span>
+                            <h2 class="font-headline" style="font-size: 2rem; font-weight: 800; color: var(--primary); margin-bottom: 1rem;">The Demographic Shift</h2>
+                            <p style="color: var(--on-surface-variant); margin-bottom: 1.5rem; line-height: 1.7;">
+                                A profound North-South divide is emerging. Northern states continue population growth driven by younger cohorts, while Southern states enter rapid demographic aging. The median age gap will widen to <strong>12 years</strong> by 2051.
+                            </p>
+                            <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+                                <div style="padding: 1rem; background: rgba(255,255,255,0.6); border-radius: 0.75rem; display: flex; justify-content: space-between; align-items: center;">
+                                    <span class="font-headline" style="font-weight: 700; color: var(--primary);">Aging South (2051)</span>
+                                    <span style="font-weight: 700; color: var(--secondary);">31% over-60</span>
+                                </div>
+                                <div style="padding: 1rem; background: rgba(255,255,255,0.6); border-radius: 0.75rem; display: flex; justify-content: space-between; align-items: center;">
+                                    <span class="font-headline" style="font-weight: 700; color: var(--primary);">Youth North (2051)</span>
+                                    <span style="font-weight: 700; color: var(--on-tertiary-container);">Median age 32</span>
+                                </div>
+                            </div>
+                            <div style="margin-top: 1rem; font-size: 0.625rem; color: var(--outline); text-transform: uppercase; letter-spacing: 0.1em;">Source: Registrar General of India, Technical Group on Population Projections (MoHFW)</div>
+                        </div>
+                        <!-- Mini Chart -->
+                        <div style="flex: 1; background: white; padding: 1.5rem; border-radius: 1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.04);">
+                            <div style="display: flex; align-items: flex-end; gap: 0.5rem; height: 12rem; margin-bottom: 1rem;">
+                                <div style="flex: 1; display: flex; gap: 2px; align-items: flex-end; height: 100%;">
+                                    <div style="flex: 1; background: var(--primary-fixed-dim); height: 50%; border-radius: 4px 4px 0 0;"></div>
+                                    <div style="flex: 1; background: var(--primary); height: 82%; border-radius: 4px 4px 0 0;"></div>
+                                </div>
+                                <div style="flex: 1; display: flex; gap: 2px; align-items: flex-end; height: 100%;">
+                                    <div style="flex: 1; background: var(--primary-fixed-dim); height: 40%; border-radius: 4px 4px 0 0;"></div>
+                                    <div style="flex: 1; background: var(--primary); height: 68%; border-radius: 4px 4px 0 0;"></div>
+                                </div>
+                                <div style="flex: 1; display: flex; gap: 2px; align-items: flex-end; height: 100%;">
+                                    <div style="flex: 1; background: var(--primary-fixed-dim); height: 60%; border-radius: 4px 4px 0 0;"></div>
+                                    <div style="flex: 1; background: var(--primary); height: 55%; border-radius: 4px 4px 0 0;"></div>
+                                </div>
+                                <div style="flex: 1; display: flex; gap: 2px; align-items: flex-end; height: 100%;">
+                                    <div style="flex: 1; background: var(--primary-fixed-dim); height: 30%; border-radius: 4px 4px 0 0;"></div>
+                                    <div style="flex: 1; background: var(--primary); height: 95%; border-radius: 4px 4px 0 0;"></div>
+                                </div>
+                            </div>
+                            <div style="text-align: center; font-size: 0.625rem; font-weight: 700; color: var(--outline); text-transform: uppercase; letter-spacing: 0.08em;">
+                                Median Age by Region · North vs South (2025 → 2051)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Resource Scarcity Sidebar -->
+                <div style="background: var(--tertiary-container); color: white; border-radius: 1.5rem; padding: 2.5rem; display: flex; flex-direction: column; justify-content: space-between;">
+                    <div>
+                        <span class="material-symbols-outlined" style="font-size: 2.75rem; margin-bottom: 1.5rem; display: block; font-variation-settings: 'FILL' 1;">water_damage</span>
+                        <h3 class="font-headline" style="font-size: 1.75rem; font-weight: 700; margin-bottom: 1rem;">Critical Resource Scarcity</h3>
+                        <p style="color: var(--tertiary-fixed); opacity: 0.9; font-size: 0.9rem; line-height: 1.6; margin-bottom: 1.5rem;">
+                            By 2030, water demand may reach <strong>2× current supply</strong>. 14 out of 22 major aquifers are already over-exploited.
+                        </p>
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+                        <div>
+                            <div style="display: flex; justify-content: space-between; font-size: 0.8rem; margin-bottom: 0.5rem;">
+                                <span>Wastewater Treated</span>
+                                <span style="font-weight: 700;">32%</span>
+                            </div>
+                            <div class="progress-track" style="background: rgba(255,255,255,0.2);">
+                                <div class="progress-fill" style="width: 32%; background: var(--secondary-fixed-dim);"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="display: flex; justify-content: space-between; font-size: 0.8rem; margin-bottom: 0.5rem;">
+                                <span>2050 Per Capita Water</span>
+                                <span style="font-weight: 700;">1,140 m³</span>
+                            </div>
+                            <div class="progress-track" style="background: rgba(255,255,255,0.2);">
+                                <div class="progress-fill" style="width: 61%; background: var(--error-container);"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="margin-top: 1rem; font-size: 0.5625rem; opacity: 0.6; text-transform: uppercase; letter-spacing: 0.1em;">Source: NITI Aayog CWMI, Central Ground Water Board (CGWB)</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ STATE HIGHLIGHTS ═══ -->
+    <section style="padding: 3rem 0;">
+        <div class="container">
+            <div style="margin-bottom: 2rem;">
+                <span class="label-md" style="color: var(--primary); display: block; margin-bottom: 0.5rem;">State Intelligence</span>
+                <h2 class="font-headline" style="font-size: 2rem; font-weight: 800; color: var(--primary);">Featured State Observatories</h2>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem;">
+                <!-- UP -->
+                <a href="uttar-pradesh.html" style="text-decoration: none; color: inherit;" class="card" style="cursor: pointer;">
+                    <div class="label-sm" style="color: var(--outline); margin-bottom: 1rem;">Uttar Pradesh</div>
+                    <div class="font-headline" style="font-size: 1.75rem; font-weight: 800; color: var(--primary);">231M</div>
+                    <div style="font-size: 0.8rem; color: var(--on-surface-variant); margin: 0.5rem 0 1rem;">Largest state — 2051 projection: ~307M</div>
+                    <div style="display: flex; align-items: center; gap: 0.25rem; font-size: 0.75rem; font-weight: 700; color: var(--primary);">
+                        Deep Dive <span class="material-symbols-outlined" style="font-size: 1rem;">chevron_right</span>
+                    </div>
+                </a>
+                <!-- Maharashtra -->
+                <div class="card">
+                    <div class="label-sm" style="color: var(--outline); margin-bottom: 1rem;">Maharashtra</div>
+                    <div class="font-headline" style="font-size: 1.75rem; font-weight: 800; color: var(--primary);">126M</div>
+                    <div style="font-size: 0.8rem; color: var(--on-surface-variant); margin: 0.5rem 0 1rem;">Economic powerhouse — 2051: ~164M</div>
+                    <div style="font-size: 0.75rem; font-weight: 700; color: var(--secondary);">82.3% Literacy</div>
+                </div>
+                <!-- Bihar -->
+                <div class="card">
+                    <div class="label-sm" style="color: var(--outline); margin-bottom: 1rem;">Bihar</div>
+                    <div class="font-headline" style="font-size: 1.75rem; font-weight: 800; color: var(--primary);">128M</div>
+                    <div style="font-size: 0.8rem; color: var(--on-surface-variant); margin: 0.5rem 0 1rem;">Fastest growth trajectory — 2051: ~182M</div>
+                    <div style="font-size: 0.75rem; font-weight: 700; color: var(--error);">Highest density</div>
+                </div>
+                <!-- Kerala -->
+                <div class="card">
+                    <div class="label-sm" style="color: var(--outline); margin-bottom: 1rem;">Kerala</div>
+                    <div class="font-headline" style="font-size: 1.75rem; font-weight: 800; color: var(--primary);">35M</div>
+                    <div style="font-size: 0.8rem; color: var(--on-surface-variant); margin: 0.5rem 0 1rem;">Aging pioneer — Median age 44 by 2051</div>
+                    <div style="font-size: 0.75rem; font-weight: 700; color: var(--secondary);">96.2% Literacy</div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 2rem;">
+                <a href="state-dashboards.html" class="btn-primary">View All State Dashboards <span class="material-symbols-outlined">arrow_forward</span></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ SOURCES BAR ═══ -->
+    <div class="source-bar" style="text-align: center; padding: 1.25rem; margin-top: 2rem;">
+        Data Sources: <a href="https://censusindia.gov.in" target="_blank">Census of India</a> · 
+        <a href="https://niti.gov.in" target="_blank">NITI Aayog</a> · 
+        <a href="https://population.un.org" target="_blank">UN Population Division</a> · 
+        <a href="https://www.worldbank.org" target="_blank">World Bank</a> · 
+        <a href="http://cgwb.gov.in" target="_blank">CGWB</a> · 
+        <a href="https://mohfw.gov.in" target="_blank">MoHFW</a> · 
+        <a href="https://www.iea.org" target="_blank">IEA</a> · 
+        <a href="https://www.downtoearth.org.in" target="_blank">Down To Earth</a> · 
+        Registrar General of India Population Projections
+    </div>
+</main>
+
+<!-- ═══ FOOTER ═══ -->
+<footer class="site-footer">
+    <div class="footer-inner">
+        <div>
+            <div class="footer-brand">The Sovereign Ledger</div>
+            <p style="color: var(--outline); font-size: 0.8rem; line-height: 1.6; max-width: 280px;">
+                Advancing India's data sovereignty through rigorous analytical observation and transparent resource accounting.
+            </p>
+        </div>
+        <div>
+            <h5>Navigation</h5>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="national-overview.html">National Overview</a></li>
+                <li><a href="state-dashboards.html">State Dashboards</a></li>
+                <li><a href="water-resources.html">Water Resources</a></li>
+                <li><a href="demographics.html">Demographics</a></li>
+            </ul>
+        </div>
+        <div>
+            <h5>Data Sources</h5>
+            <ul>
+                <li><a href="https://censusindia.gov.in" target="_blank">Census of India</a></li>
+                <li><a href="https://niti.gov.in" target="_blank">NITI Aayog</a></li>
+                <li><a href="https://population.un.org" target="_blank">UN World Population</a></li>
+                <li><a href="https://www.worldbank.org" target="_blank">World Bank</a></li>
+            </ul>
+        </div>
+        <div>
+            <h5>Legal</h5>
+            <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">API Documentation</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div>© 2025 The Sovereign Ledger. Data sourced from <a href="https://censusindia.gov.in">Census</a>, <a href="https://niti.gov.in">NITI Aayog</a>, <a href="https://mohfw.gov.in">MoHFW</a>.</div>
+        <div style="display: flex; gap: 1.5rem;">
+            <span>V3.1.0-Stable</span>
+            <span>System Status: Operational</span>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

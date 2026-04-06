@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Water Resources Observatory | The Sovereign Ledger</title>
+    <meta name="description" content="National hydrometric analysis — India's water crisis projections to 2051. Basin-level analytics, groundwater depletion, and policy interventions."/>
+    <link rel="stylesheet" href="styles.css"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>tailwind.config={theme:{extend:{colors:{"primary":"#000666","primary-container":"#1a237e","primary-fixed":"#e0e0ff","primary-fixed-dim":"#bdc2ff","on-primary":"#ffffff","on-primary-container":"#8690ee","secondary":"#1b6d24","secondary-container":"#a0f399","secondary-fixed":"#a3f69c","secondary-fixed-dim":"#88d982","on-secondary-container":"#217128","tertiary":"#3a0800","tertiary-container":"#5f1300","tertiary-fixed":"#ffdbd1","tertiary-fixed-dim":"#ffb5a1","on-tertiary-container":"#ff663c","error":"#ba1a1a","error-container":"#ffdad6","surface":"#fbf8ff","surface-container-lowest":"#ffffff","surface-container-low":"#f5f2fb","surface-container":"#efecf5","surface-container-high":"#eae7ef","surface-container-highest":"#e4e1ea","on-surface":"#1b1b21","on-surface-variant":"#454652","outline":"#767683","outline-variant":"#c6c5d4"},fontFamily:{"headline":["Manrope"],"body":["Inter"],"label":["Inter"]},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"}}}};</script>
+    <style>::-webkit-scrollbar{width:6px}::-webkit-scrollbar-track{background:transparent}::-webkit-scrollbar-thumb{background:#c6c5d4;border-radius:10px}</style>
+</head>
+<body class="bg-surface text-on-surface">
+<nav class="top-nav"><div class="nav-inner"><a href="index.html" class="brand">The Sovereign Ledger</a><ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="national-overview.html">National Overview</a></li><li><a href="state-dashboards.html">State Dashboards</a></li><li><a href="water-resources.html" class="active">Water Resources</a></li><li><a href="demographics.html">Demographics</a></li></ul><button class="hamburger" onclick="document.getElementById('mobileMenu').classList.toggle('open')"><span class="material-symbols-outlined">menu</span></button></div></nav>
+<div id="mobileMenu" class="mobile-menu"><a href="index.html">Home</a><a href="national-overview.html">National Overview</a><a href="state-dashboards.html">State Dashboards</a><a href="water-resources.html" class="active">Water Resources</a><a href="demographics.html">Demographics</a></div>
+
+<main style="padding-top: 72px; position: relative;">
+    <div style="position: fixed; inset: 0; background-image: radial-gradient(#1a237e 0.5px, transparent 0.5px); background-size: 24px 24px; opacity: 0.025; z-index: 0; pointer-events: none;"></div>
+    <div class="container" style="position: relative; z-index: 10; padding-top: 3rem; padding-bottom: 4rem;">
+
+        <!-- Header -->
+        <header style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 3rem;">
+            <div>
+                <span class="label-md" style="color: var(--outline); display: block; margin-bottom: 0.5rem;">Central Water Commission Data</span>
+                <h1 class="font-headline" style="font-size: 3rem; font-weight: 800; color: var(--primary); letter-spacing: -0.03em;">National Hydrometric<br/>Overview</h1>
+            </div>
+            <div style="text-align: right;">
+                <p style="font-size: 0.875rem; font-weight: 600; color: var(--primary);">Status: Monitoring Active</p>
+                <p style="font-size: 0.75rem; color: var(--on-surface-variant);">Last Update: Apr 2025 | Cycle 12</p>
+            </div>
+        </header>
+
+        <!-- National Metrics -->
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 3rem;">
+            <div class="card" style="position: relative; overflow: hidden;">
+                <div class="label-sm" style="color: var(--on-surface-variant); margin-bottom: 1.25rem;">Total Renewable Water</div>
+                <div class="font-headline" style="font-size: 2.25rem; font-weight: 800; color: var(--primary); margin-bottom: 0.75rem;">1,869 <span style="font-size: 1rem; font-weight: 400; color: var(--on-surface-variant);">BCM/yr</span></div>
+                <div class="progress-track progress-slim"><div class="progress-fill" style="width: 75%; background: var(--secondary);"></div></div>
+                <p style="font-size: 0.75rem; margin-top: 0.75rem; color: var(--on-surface-variant); display: flex; align-items: center; gap: 0.25rem;"><span class="material-symbols-outlined" style="font-size: 0.875rem;">arrow_downward</span> 2.1% decline from baseline</p>
+                <div style="margin-top: 0.5rem; font-size: 0.5625rem; color: var(--outline); text-transform: uppercase; letter-spacing: 0.1em;">→ 2051: Effective availability drops to ~1,400 BCM (CWC)</div>
+                <span class="material-symbols-outlined" style="position: absolute; right: -1rem; bottom: -1rem; font-size: 6rem; opacity: 0.04;">water</span>
+            </div>
+            <div class="card" style="position: relative; overflow: hidden;">
+                <div class="label-sm" style="color: var(--on-surface-variant); margin-bottom: 1.25rem;">Ground Water Depth Index</div>
+                <div style="display: flex; align-items: baseline; gap: 0.5rem; margin-bottom: 0.75rem;">
+                    <div class="font-headline" style="font-size: 2.25rem; font-weight: 800; color: var(--tertiary-container);">Critical</div>
+                    <span style="background: var(--error-container); color: #93000a; font-size: 0.5625rem; padding: 0.2rem 0.5rem; border-radius: 4px; font-weight: 700;">16 STATES</span>
+                </div>
+                <p style="font-size: 0.8rem; color: var(--on-surface-variant); line-height: 1.5;">Excessive extraction in North-West regions leads to alarming aquifer subsidence.</p>
+                <div style="margin-top: 0.75rem; font-size: 0.5625rem; color: var(--outline); text-transform: uppercase; letter-spacing: 0.1em;">→ 2051: 22 states at critical depletion (CGWB projection)</div>
+                <span class="material-symbols-outlined" style="position: absolute; right: -1rem; bottom: -1rem; font-size: 6rem; opacity: 0.04;">layers</span>
+            </div>
+            <div class="card" style="border-top: 4px solid var(--tertiary-container);">
+                <div class="label-sm" style="color: var(--tertiary-container); margin-bottom: 1.25rem;">Projected 2030 Shortfall</div>
+                <div class="font-headline" style="font-size: 3.5rem; font-weight: 800; color: var(--primary); margin-bottom: 0.25rem;">40%</div>
+                <p style="font-weight: 700; color: var(--on-surface); margin-bottom: 0.25rem;">Demand-Supply Gap</p>
+                <p style="font-size: 0.8rem; color: var(--on-surface-variant);">Based on NITI Aayog composite water index. GDP loss: up to 6%.</p>
+                <div style="margin-top: 0.75rem; font-size: 0.5625rem; color: var(--outline); text-transform: uppercase; letter-spacing: 0.1em;">→ 2051: Gap widens to 55% without structural reform (NITI Aayog)</div>
+            </div>
+        </div>
+
+        <!-- Basin Analytics & Heatmap -->
+        <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 1.5rem; margin-bottom: 3rem;">
+            <div>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;">
+                    <div><h2 class="font-headline" style="font-size: 1.5rem; font-weight: 800; color: var(--primary);">Basin-Level Analytics</h2><p style="font-size: 0.8rem; color: var(--on-surface-variant);">Indo-Gangetic Basin Stress Monitoring</p></div>
+                </div>
+                <div class="card" style="overflow: hidden; padding: 0;">
+                    <table style="width: 100%; text-align: left; border-collapse: collapse;">
+                        <thead>
+                            <tr style="background: var(--surface-container-low);">
+                                <th style="padding: 1.25rem 2rem;" class="label-sm">River Basin</th>
+                                <th style="padding: 1.25rem 2rem;" class="label-sm">Stress Level</th>
+                                <th style="padding: 1.25rem 2rem;" class="label-sm">Flow (BCM)</th>
+                                <th style="padding: 1.25rem 2rem;" class="label-sm">2051 Outlook</th>
+                                <th style="padding: 1.25rem 2rem; text-align: right;" class="label-sm">Trend</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="transition: background 0.2s;" onmouseover="this.style.background='rgba(99,102,241,0.04)'" onmouseout="this.style.background='transparent'">
+                                <td style="padding: 1.25rem 2rem;"><strong style="color: var(--primary);">Ganga</strong><br><span style="font-size: 0.625rem; color: var(--on-surface-variant);">Upper Catchment</span></td>
+                                <td style="padding: 1.25rem 2rem;"><span style="background: #fef2f2; color: #b91c1c; font-size: 0.625rem; font-weight: 700; padding: 0.25rem 0.75rem; border-radius: 999px; text-transform: uppercase;">Extreme</span></td>
+                                <td style="padding: 1.25rem 2rem; font-weight: 500;">620.1</td>
+                                <td style="padding: 1.25rem 2rem; font-size: 0.75rem; color: var(--error); font-weight: 600;">480 BCM</td>
+                                <td style="padding: 1.25rem 2rem; text-align: right;"><span class="material-symbols-outlined" style="color: #dc2626;">trending_down</span></td>
+                            </tr>
+                            <tr style="transition: background 0.2s;" onmouseover="this.style.background='rgba(99,102,241,0.04)'" onmouseout="this.style.background='transparent'">
+                                <td style="padding: 1.25rem 2rem;"><strong style="color: var(--primary);">Yamuna</strong><br><span style="font-size: 0.625rem; color: var(--on-surface-variant);">Delhi-NCR Sector</span></td>
+                                <td style="padding: 1.25rem 2rem;"><span style="background: #fff7ed; color: #c2410c; font-size: 0.625rem; font-weight: 700; padding: 0.25rem 0.75rem; border-radius: 999px; text-transform: uppercase;">High Risk</span></td>
+                                <td style="padding: 1.25rem 2rem; font-weight: 500;">98.4</td>
+                                <td style="padding: 1.25rem 2rem; font-size: 0.75rem; color: #c2410c; font-weight: 600;">72 BCM</td>
+                                <td style="padding: 1.25rem 2rem; text-align: right;"><span class="material-symbols-outlined" style="color: #ea580c;">trending_flat</span></td>
+                            </tr>
+                            <tr style="transition: background 0.2s;" onmouseover="this.style.background='rgba(99,102,241,0.04)'" onmouseout="this.style.background='transparent'">
+                                <td style="padding: 1.25rem 2rem;"><strong style="color: var(--primary);">Brahmaputra</strong><br><span style="font-size: 0.625rem; color: var(--on-surface-variant);">Arunachal-Assam</span></td>
+                                <td style="padding: 1.25rem 2rem;"><span style="background: #f0fdf4; color: #15803d; font-size: 0.625rem; font-weight: 700; padding: 0.25rem 0.75rem; border-radius: 999px; text-transform: uppercase;">Stable</span></td>
+                                <td style="padding: 1.25rem 2rem; font-weight: 500;">527.2</td>
+                                <td style="padding: 1.25rem 2rem; font-size: 0.75rem; color: #15803d; font-weight: 600;">510 BCM</td>
+                                <td style="padding: 1.25rem 2rem; text-align: right;"><span class="material-symbols-outlined" style="color: #16a34a;">trending_up</span></td>
+                            </tr>
+                            <tr style="transition: background 0.2s;" onmouseover="this.style.background='rgba(99,102,241,0.04)'" onmouseout="this.style.background='transparent'">
+                                <td style="padding: 1.25rem 2rem;"><strong style="color: var(--primary);">Indus</strong><br><span style="font-size: 0.625rem; color: var(--on-surface-variant);">Punjab-Haryana</span></td>
+                                <td style="padding: 1.25rem 2rem;"><span style="background: #fef2f2; color: #b91c1c; font-size: 0.625rem; font-weight: 700; padding: 0.25rem 0.75rem; border-radius: 999px; text-transform: uppercase;">Extreme</span></td>
+                                <td style="padding: 1.25rem 2rem; font-weight: 500;">73.3</td>
+                                <td style="padding: 1.25rem 2rem; font-size: 0.75rem; color: var(--error); font-weight: 600;">48 BCM</td>
+                                <td style="padding: 1.25rem 2rem; text-align: right;"><span class="material-symbols-outlined" style="color: #dc2626;">trending_down</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div style="margin-top: 0.75rem; font-size: 0.5625rem; color: var(--outline); text-transform: uppercase; letter-spacing: 0.1em;">Source: Central Water Commission (CWC), India-WRIS Portal, CGWB Aquifer Mapping (2024)</div>
+
+                <!-- Regional Scarcity -->
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 2rem;">
+                    <div style="background: var(--surface-container-low); padding: 2rem; border-radius: 0.75rem; border-left: 4px solid var(--secondary);">
+                        <div class="label-sm" style="color: var(--secondary); margin-bottom: 0.75rem;">Mountain States</div>
+                        <div style="display: flex; align-items: baseline; gap: 0.5rem; margin-bottom: 0.25rem;"><span class="font-headline" style="font-size: 1.75rem; font-weight: 800; color: var(--primary);">12,400</span><span style="font-size: 0.75rem; color: var(--on-surface-variant);">m³/person</span></div>
+                        <p style="font-size: 0.75rem; color: var(--on-surface-variant);">Sustained by glacial melt and high precipitation. <strong>2051: Drop to ~8,000 m³/person</strong> as glaciers recede.</p>
+                    </div>
+                    <div style="background: var(--surface-container-low); padding: 2rem; border-radius: 0.75rem; border-left: 4px solid var(--tertiary-container);">
+                        <div class="label-sm" style="color: var(--tertiary-container); margin-bottom: 0.75rem;">Arid States</div>
+                        <div style="display: flex; align-items: baseline; gap: 0.5rem; margin-bottom: 0.25rem;"><span class="font-headline" style="font-size: 1.75rem; font-weight: 800; color: var(--primary);">940</span><span style="font-size: 0.75rem; color: var(--on-surface-variant);">m³/person</span></div>
+                        <p style="font-size: 0.75rem; color: var(--on-surface-variant);">Near absolute scarcity in Rajasthan. <strong>2051: Below 500 m³/person</strong> — humanitarian threshold.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Heatmap & Infrastructure -->
+            <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+                <div class="card" style="padding: 1.5rem; overflow: hidden;">
+                    <h3 class="font-headline" style="font-size: 1.15rem; font-weight: 700; color: var(--primary); margin-bottom: 0.25rem;">Depletion Heatmap</h3>
+                    <p style="font-size: 0.75rem; color: var(--on-surface-variant); margin-bottom: 1rem;">Critical Aquifer Hotspots</p>
+                    <div style="position: relative; border-radius: 0.5rem; overflow: hidden; height: 260px; background: var(--surface-container-high);">
+                        <img alt="India water depletion heatmap" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5VTga-agQepCUXy3tbBut8Doq5XbrbKKxnp33Bkw3rYLJdPDTP8HXTTbkuRzCNEx68TKF4iTSLGdCeL23fsD6ZuG4_ZSgJX4iducz5mvcFcFIooxCpxScJlnA_8psadT0LpYMGrdkD31BKOi8aLq_XDUH5bStGao3OyY8Sh-ID_1LTemle66XbDFhyiWsMVO-_EOOIvERhN2YZmHOpzKn9LGHyIXza5yc85Xtn5nOdLxW1TmVXl3LQuvP5fqPp21cTxgR52Ds" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.8; mix-blend-mode: multiply;"/>
+                        <div style="position: absolute; top: 25%; left: 25%; width: 0.75rem; height: 0.75rem; background: #ef4444; border-radius: 50%; animation: pulse-glow 2s infinite;"></div>
+                        <div style="position: absolute; bottom: 1rem; left: 1rem; background: rgba(255,255,255,0.9); backdrop-filter: blur(8px); padding: 0.75rem; border-radius: 0.5rem; font-size: 0.625rem;">
+                            <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.25rem;"><span style="width: 0.5rem; height: 0.5rem; border-radius: 50%; background: #dc2626;"></span> Punjab / Haryana</div>
+                            <div style="display: flex; align-items: center; gap: 0.5rem;"><span style="width: 0.5rem; height: 0.5rem; border-radius: 50%; background: #ea580c;"></span> Rajasthan (Arid)</div>
+                        </div>
+                    </div>
+                </div>
+                <div style="background: var(--primary-container); color: white; padding: 2rem; border-radius: 1rem; position: relative; overflow: hidden;">
+                    <div class="label-sm" style="color: #a5b4fc; margin-bottom: 1.25rem;">Infrastructure Ledger</div>
+                    <div style="margin-bottom: 1.5rem;">
+                        <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 0.5rem;"><span style="font-size: 0.8rem;">Wastewater Treatment</span><span style="font-size: 1.15rem; font-weight: 700;">32%</span></div>
+                        <div class="progress-track" style="background: rgba(255,255,255,0.2);"><div class="progress-fill" style="width: 32%; background: var(--secondary-fixed);"></div></div>
+                        <div style="font-size: 0.5625rem; opacity: 0.6; margin-top: 0.25rem;">→ 2051 Target: 75%</div>
+                    </div>
+                    <div style="background: rgba(30,27,75,0.5); padding: 1.25rem; border-radius: 0.75rem;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;"><span style="font-size: 0.75rem; font-weight: 700;">Extraction Rate</span><span class="material-symbols-outlined" style="color: var(--tertiary-fixed-dim);">speed</span></div>
+                        <div style="display: flex; align-items: baseline; gap: 0.25rem;"><span class="font-headline" style="font-size: 2.25rem; font-weight: 800; color: var(--tertiary-fixed-dim);">137%</span><span style="font-size: 0.625rem; opacity: 0.7;">in NW Regions</span></div>
+                        <p style="font-size: 0.625rem; opacity: 0.7; margin-top: 0.5rem;">→ 2051: 180% if unchecked (CGWB/CWC)</p>
+                    </div>
+                    <div style="margin-top: 1rem; font-size: 0.5625rem; opacity: 0.5; text-transform: uppercase; letter-spacing: 0.1em;">Sources: Ministry of Jal Shakti, CWC, CGWB</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Policy Interventions -->
+        <section style="background: var(--surface-container-low); padding: 2.5rem; border-radius: 1.5rem; margin-bottom: 2rem;">
+            <h2 class="font-headline" style="font-size: 1.5rem; font-weight: 800; color: var(--primary); margin-bottom: 1.5rem;">Critical Policy Interventions (2025–2051)</h2>
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;">
+                <div style="background: white; padding: 1.5rem; border-radius: 0.75rem; box-shadow: 0 4px 12px rgba(0,0,0,0.04);">
+                    <span class="material-symbols-outlined" style="color: var(--secondary); font-size: 1.5rem; margin-bottom: 0.75rem; display: block;">water_drop</span>
+                    <h4 class="font-headline" style="font-weight: 700; font-size: 1rem; margin-bottom: 0.5rem;">Jal Jeevan Mission</h4>
+                    <p style="font-size: 0.8rem; color: var(--on-surface-variant); line-height: 1.5;">Tap water to every rural household. 14.8 crore connections achieved. Target: 100% saturation.</p>
+                    <div style="margin-top: 0.5rem; font-size: 0.5625rem; color: var(--outline);">Source: Ministry of Jal Shakti</div>
+                </div>
+                <div style="background: white; padding: 1.5rem; border-radius: 0.75rem; box-shadow: 0 4px 12px rgba(0,0,0,0.04);">
+                    <span class="material-symbols-outlined" style="color: var(--primary); font-size: 1.5rem; margin-bottom: 0.75rem; display: block;">construction</span>
+                    <h4 class="font-headline" style="font-weight: 700; font-size: 1rem; margin-bottom: 0.5rem;">Atal Bhujal Yojana</h4>
+                    <p style="font-size: 0.8rem; color: var(--on-surface-variant); line-height: 1.5;">Community-led groundwater management in 8,353 water-stressed gram panchayats across 7 states.</p>
+                    <div style="margin-top: 0.5rem; font-size: 0.5625rem; color: var(--outline);">Source: World Bank / GoI Joint Initiative</div>
+                </div>
+                <div style="background: white; padding: 1.5rem; border-radius: 0.75rem; box-shadow: 0 4px 12px rgba(0,0,0,0.04);">
+                    <span class="material-symbols-outlined" style="color: var(--on-tertiary-container); font-size: 1.5rem; margin-bottom: 0.75rem; display: block;">cloud</span>
+                    <h4 class="font-headline" style="font-weight: 700; font-size: 1rem; margin-bottom: 0.5rem;">Catch the Rain</h4>
+                    <p style="font-size: 0.8rem; color: var(--on-surface-variant); line-height: 1.5;">Jal Shakti Abhiyan targeting rainwater harvesting and aquifer recharge across drought-prone districts.</p>
+                    <div style="margin-top: 0.5rem; font-size: 0.5625rem; color: var(--outline);">Source: Jal Shakti Abhiyan, PIB</div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="source-bar" style="text-align: center; padding: 1.25rem;">Data Sources: <a href="http://cwc.gov.in" target="_blank">Central Water Commission (CWC)</a> · <a href="http://cgwb.gov.in" target="_blank">CGWB</a> · <a href="https://niti.gov.in" target="_blank">NITI Aayog CWMI</a> · <a href="https://jalshakti-ddws.gov.in" target="_blank">Jal Shakti Ministry</a> · <a href="https://www.worldbank.org" target="_blank">World Bank</a> · <a href="https://indiawris.gov.in" target="_blank">India-WRIS</a> · IPCC AR6</div>
+</main>
+
+<footer class="site-footer"><div class="footer-inner"><div><div class="footer-brand">The Sovereign Ledger</div><p style="color:var(--outline);font-size:0.8rem;line-height:1.6;max-width:280px;">Advancing India's data sovereignty.</p></div><div><h5>Navigation</h5><ul><li><a href="index.html">Home</a></li><li><a href="national-overview.html">National Overview</a></li><li><a href="state-dashboards.html">State Dashboards</a></li><li><a href="water-resources.html">Water Resources</a></li><li><a href="demographics.html">Demographics</a></li></ul></div><div><h5>Data Sources</h5><ul><li><a href="http://cwc.gov.in" target="_blank">CWC</a></li><li><a href="http://cgwb.gov.in" target="_blank">CGWB</a></li><li><a href="https://niti.gov.in" target="_blank">NITI Aayog</a></li></ul></div><div><h5>Legal</h5><ul><li><a href="#">Privacy Policy</a></li></ul></div></div><div class="footer-bottom"><div>© 2025 The Sovereign Ledger.</div><div>Institutional Grade Data</div></div></footer>
+</body>
+</html>

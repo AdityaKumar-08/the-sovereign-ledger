@@ -1,0 +1,450 @@
+/* =======================================
+   THE SOVEREIGN LEDGER — Design System
+   ======================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap');
+
+/* — CSS Custom Properties — */
+:root {
+  --primary: #000666;
+  --primary-container: #1a237e;
+  --primary-fixed: #e0e0ff;
+  --primary-fixed-dim: #bdc2ff;
+  --on-primary: #ffffff;
+  --on-primary-container: #8690ee;
+  --on-primary-fixed: #000767;
+  --on-primary-fixed-variant: #343d96;
+
+  --secondary: #1b6d24;
+  --secondary-container: #a0f399;
+  --secondary-fixed: #a3f69c;
+  --secondary-fixed-dim: #88d982;
+  --on-secondary: #ffffff;
+  --on-secondary-container: #217128;
+
+  --tertiary: #3a0800;
+  --tertiary-container: #5f1300;
+  --tertiary-fixed: #ffdbd1;
+  --tertiary-fixed-dim: #ffb5a1;
+  --on-tertiary: #ffffff;
+  --on-tertiary-container: #ff663c;
+
+  --error: #ba1a1a;
+  --error-container: #ffdad6;
+
+  --surface: #fbf8ff;
+  --surface-container-lowest: #ffffff;
+  --surface-container-low: #f5f2fb;
+  --surface-container: #efecf5;
+  --surface-container-high: #eae7ef;
+  --surface-container-highest: #e4e1ea;
+  --surface-dim: #dbd9e1;
+  --surface-variant: #e4e1ea;
+
+  --on-surface: #1b1b21;
+  --on-surface-variant: #454652;
+  --on-background: #1b1b21;
+  --outline: #767683;
+  --outline-variant: #c6c5d4;
+
+  --inverse-surface: #303036;
+  --inverse-on-surface: #f2eff8;
+  --inverse-primary: #bdc2ff;
+
+  --shadow-ambient: rgba(26, 35, 126, 0.06);
+  --shadow-deep: rgba(26, 35, 126, 0.12);
+}
+
+/* — Base Reset — */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--surface);
+  color: var(--on-surface);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* — Typography Scale — */
+h1, h2, h3, .font-headline {
+  font-family: 'Manrope', sans-serif;
+}
+
+.display-lg { font-size: 3.5rem; font-weight: 800; letter-spacing: -0.02em; line-height: 1.1; }
+.display-md { font-size: 2.75rem; font-weight: 800; letter-spacing: -0.02em; line-height: 1.15; }
+.headline-lg { font-size: 2rem; font-weight: 700; letter-spacing: -0.01em; }
+.headline-md { font-size: 1.75rem; font-weight: 700; }
+.title-lg { font-size: 1.375rem; font-weight: 600; }
+.title-md { font-size: 1rem; font-weight: 600; }
+.body-lg { font-size: 1rem; line-height: 1.7; }
+.body-md { font-size: 0.875rem; line-height: 1.6; }
+.label-lg { font-size: 0.875rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; }
+.label-md { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; }
+.label-sm { font-size: 0.625rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; }
+
+/* — Material Symbols — */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  vertical-align: middle;
+}
+
+/* — Glassmorphism — */
+.glass-nav {
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+}
+
+.glass-panel {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+/* — Grid Background Texture — */
+.grid-bg {
+  background-image: radial-gradient(circle, var(--outline-variant) 1px, transparent 1px);
+  background-size: 32px 32px;
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+/* — Layout — */
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 2.5rem;
+}
+
+.section-spacing { padding: 5rem 0; }
+
+/* — Cards (No-Line Rule) — */
+.card {
+  background: var(--surface-container-lowest);
+  border-radius: 1rem;
+  box-shadow: 0 12px 32px var(--shadow-ambient);
+  padding: 2rem;
+  transition: all 0.4s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.card:hover {
+  box-shadow: 0 20px 40px var(--shadow-deep);
+  transform: translateY(-2px);
+}
+
+.card-flush {
+  background: var(--surface-container-low);
+  border-radius: 1.5rem;
+  padding: 3rem;
+}
+
+/* — Buttons — */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 2rem;
+  background: linear-gradient(135deg, var(--primary), var(--primary-container));
+  color: var(--on-primary);
+  border: none;
+  border-radius: 0.75rem;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 700;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  box-shadow: 0 8px 24px rgba(0, 6, 102, 0.3);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: var(--surface-container-high);
+  color: var(--primary);
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background: var(--surface-container-highest);
+}
+
+/* — Navigation — */
+.top-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  box-shadow: 0 1px 0 rgba(0,0,0,0.04);
+  transition: all 0.3s ease;
+}
+
+.top-nav .nav-inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2.5rem;
+  height: 72px;
+}
+
+.top-nav .brand {
+  font-family: 'Manrope', sans-serif;
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: #1a1a4e;
+  text-decoration: none;
+}
+
+.top-nav .nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+}
+
+.top-nav .nav-links a {
+  text-decoration: none;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: var(--outline);
+  transition: color 0.2s ease;
+  padding-bottom: 4px;
+}
+
+.top-nav .nav-links a:hover {
+  color: var(--primary);
+}
+
+.top-nav .nav-links a.active {
+  color: #3949ab;
+  border-bottom: 2px solid #3949ab;
+}
+
+/* Mobile hamburger */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  color: var(--on-surface);
+}
+
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 72px;
+  left: 0;
+  right: 0;
+  background: white;
+  padding: 1.5rem;
+  box-shadow: 0 8px 24px var(--shadow-ambient);
+  z-index: 99;
+}
+
+.mobile-menu.open { display: block; }
+
+.mobile-menu a {
+  display: block;
+  padding: 0.75rem 0;
+  text-decoration: none;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 600;
+  color: var(--on-surface);
+  border-bottom: 1px solid var(--surface-container);
+}
+
+.mobile-menu a.active {
+  color: var(--primary);
+}
+
+/* — Progress Bars — */
+.progress-track {
+  width: 100%;
+  height: 6px;
+  background: var(--surface-container-highest);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 999px;
+  transition: width 1s ease;
+}
+
+.progress-slim { height: 4px; }
+
+/* — Source Citation Bar — */
+.source-bar {
+  background: var(--surface-container);
+  padding: 1rem 2.5rem;
+  font-size: 0.6875rem;
+  color: var(--outline);
+  letter-spacing: 0.02em;
+}
+
+.source-bar a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.source-bar a:hover { opacity: 0.7; }
+
+/* — Footer — */
+.site-footer {
+  background: var(--surface-container-low);
+  padding: 3rem 0;
+  margin-top: 4rem;
+}
+
+.site-footer .footer-inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 2.5rem;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 2rem;
+}
+
+.site-footer .footer-brand {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 800;
+  font-size: 1.15rem;
+  color: #1a1a4e;
+  margin-bottom: 0.75rem;
+}
+
+.site-footer h5 {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 700;
+  font-size: 0.625rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #1a1a4e;
+  margin-bottom: 1rem;
+}
+
+.site-footer ul {
+  list-style: none;
+}
+
+.site-footer ul li {
+  margin-bottom: 0.5rem;
+}
+
+.site-footer ul li a {
+  color: var(--outline);
+  text-decoration: none;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+
+.site-footer ul li a:hover {
+  color: var(--primary);
+}
+
+.footer-bottom {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 1.5rem 2.5rem 0;
+  border-top: 1px solid var(--surface-container);
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.625rem;
+  color: var(--outline);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.footer-bottom a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+/* — Animations — */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(186, 26, 26, 0.4); }
+  50% { box-shadow: 0 0 12px 4px rgba(186, 26, 26, 0.2); }
+}
+
+.animate-in {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.pulse-alert {
+  animation: pulse-glow 2s infinite;
+}
+
+/* — Scrollbar — */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--outline-variant); border-radius: 10px; }
+
+/* — Selection — */
+::selection {
+  background: var(--primary-fixed-dim);
+  color: var(--primary);
+}
+
+/* — Responsive — */
+@media (max-width: 1024px) {
+  .site-footer .footer-inner {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .top-nav .nav-links { display: none; }
+  .hamburger { display: block; }
+
+  .display-lg { font-size: 2.5rem; }
+  .display-md { font-size: 2rem; }
+
+  .container { padding: 0 1.25rem; }
+
+  .site-footer .footer-inner {
+    grid-template-columns: 1fr;
+  }
+}

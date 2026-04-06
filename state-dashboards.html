@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>State Dashboards | The Sovereign Ledger</title>
+    <meta name="description" content="Explore India's 28 states and 8 union territories — population projections to 2051, literacy rates, and resource indices."/>
+    <link rel="stylesheet" href="styles.css"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>tailwind.config={theme:{extend:{colors:{"primary":"#000666","primary-container":"#1a237e","primary-fixed":"#e0e0ff","primary-fixed-dim":"#bdc2ff","on-primary":"#ffffff","on-primary-container":"#8690ee","secondary":"#1b6d24","secondary-container":"#a0f399","secondary-fixed":"#a3f69c","on-secondary-container":"#217128","tertiary":"#3a0800","tertiary-container":"#5f1300","tertiary-fixed":"#ffdbd1","on-tertiary-container":"#ff663c","error":"#ba1a1a","error-container":"#ffdad6","surface":"#fbf8ff","surface-container-lowest":"#ffffff","surface-container-low":"#f5f2fb","surface-container":"#efecf5","surface-container-high":"#eae7ef","surface-container-highest":"#e4e1ea","on-surface":"#1b1b21","on-surface-variant":"#454652","outline":"#767683","outline-variant":"#c6c5d4"},fontFamily:{"headline":["Manrope"],"body":["Inter"],"label":["Inter"]},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"}}}};</script>
+</head>
+<body class="bg-surface text-on-surface">
+<nav class="top-nav"><div class="nav-inner"><a href="index.html" class="brand">The Sovereign Ledger</a><ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="national-overview.html">National Overview</a></li><li><a href="state-dashboards.html" class="active">State Dashboards</a></li><li><a href="water-resources.html">Water Resources</a></li><li><a href="demographics.html">Demographics</a></li></ul><button class="hamburger" onclick="document.getElementById('mobileMenu').classList.toggle('open')"><span class="material-symbols-outlined">menu</span></button></div></nav>
+<div id="mobileMenu" class="mobile-menu"><a href="index.html">Home</a><a href="national-overview.html">National Overview</a><a href="state-dashboards.html" class="active">State Dashboards</a><a href="water-resources.html">Water Resources</a><a href="demographics.html">Demographics</a></div>
+
+<main style="padding-top: 72px;">
+    <!-- Hero -->
+    <section style="position: relative; padding: 4rem 0; overflow: hidden;">
+        <div class="grid-bg" style="position: absolute; inset: 0;"></div>
+        <div class="container" style="display: flex; gap: 3rem; align-items: flex-start; position: relative; z-index: 10;">
+            <div style="flex: 3;">
+                <span class="label-md" style="display: inline-block; padding: 0.375rem 1rem; background: var(--primary-container); color: var(--on-primary-container); border-radius: 4px; margin-bottom: 1rem;">Institutional Observatory</span>
+                <h1 class="font-headline" style="font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 800; letter-spacing: -0.03em; color: var(--primary); line-height: 1.05;">Regional Explorer</h1>
+                <p style="font-size: 1.1rem; color: var(--on-surface-variant); max-width: 600px; margin-top: 1rem; line-height: 1.7;">A decentralized ledger of India's sub-national trajectories. Analyze divergent demographics, resource dependencies, and institutional resilience across 28 States and 8 Union Territories — with projections to 2051.</p>
+            </div>
+            <div style="flex: 2; background: var(--surface-container-lowest); padding: 2rem; border-radius: 0.75rem; box-shadow: 0 12px 32px rgba(26,35,126,0.06); border-left: 4px solid var(--tertiary-container); position: relative; overflow: hidden;">
+                <div style="position: absolute; top: 0; right: 0; padding: 1rem; opacity: 0.08;"><span class="material-symbols-outlined" style="font-size: 6rem;">analytics</span></div>
+                <div class="label-sm" style="color: var(--tertiary-container); margin-bottom: 0.75rem;">Spotlight: The Aging Frontier</div>
+                <h2 class="font-headline" style="font-size: 1.75rem; font-weight: 700; color: var(--primary); margin-bottom: 0.5rem;">Kerala</h2>
+                <p style="font-size: 0.8rem; color: var(--on-surface-variant); line-height: 1.5; margin-bottom: 1rem;">Leading the demographic transition with 2051 projections indicating a median age of <strong>44</strong>. 31% elderly population by 2051.</p>
+                <div><div class="font-headline" style="font-size: 1.5rem; font-weight: 700; color: var(--primary);">96.2%</div><div class="label-sm" style="color: var(--outline);">Literacy Index</div></div>
+                <div style="margin-top: 0.75rem; font-size: 0.5625rem; color: var(--outline); text-transform: uppercase; letter-spacing: 0.1em;">Source: Census of India, MoHFW</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- State Grid -->
+    <section style="padding: 3rem 0;">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem;" id="stateGrid">
+                <!-- Template for each state card -->
+                <script>
+                const states = [
+                    { name: "Uttar Pradesh", region: "CENTRAL", pop2025: "231M", proj2051: "~307M", literacy: "73.0%", link: "uttar-pradesh.html", highlight: true },
+                    { name: "Maharashtra", region: "WEST", pop2025: "126M", proj2051: "~164M", literacy: "82.3%", link: "#" },
+                    { name: "Bihar", region: "EAST", pop2025: "128M", proj2051: "~182M", literacy: "63.8%", link: "#" },
+                    { name: "West Bengal", region: "EAST", pop2025: "99M", proj2051: "~115M", literacy: "77.1%", link: "#" },
+                    { name: "Madhya Pradesh", region: "CENTRAL", pop2025: "85M", proj2051: "~120M", literacy: "70.6%", link: "#" },
+                    { name: "Tamil Nadu", region: "SOUTH", pop2025: "78M", proj2051: "~84M", literacy: "80.1%", link: "#" },
+                    { name: "Rajasthan", region: "NORTH", pop2025: "81M", proj2051: "~112M", literacy: "66.1%", link: "#" },
+                    { name: "Karnataka", region: "SOUTH", pop2025: "67M", proj2051: "~78M", literacy: "75.4%", link: "#" },
+                    { name: "Gujarat", region: "WEST", pop2025: "64M", proj2051: "~82M", literacy: "78.0%", link: "#" },
+                    { name: "Andhra Pradesh", region: "SOUTH", pop2025: "53M", proj2051: "~58M", literacy: "67.4%", link: "#" },
+                    { name: "Kerala", region: "SOUTH", pop2025: "35M", proj2051: "~33M", literacy: "96.2%", link: "#" },
+                    { name: "Haryana", region: "NORTH", pop2025: "30M", proj2051: "~37M", literacy: "75.6%", link: "#" },
+                ];
+                const grid = document.getElementById('stateGrid');
+                states.forEach(s => {
+                    const card = document.createElement('div');
+                    card.className = 'card';
+                    card.style.cssText = 'cursor: pointer; display: flex; flex-direction: column; justify-content: space-between;';
+                    card.innerHTML = `
+                        <div>
+                            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1.25rem;">
+                                <h3 class="font-headline" style="font-size: 1.25rem; font-weight: 700; color: var(--primary);">${s.name}</h3>
+                                <span style="background: var(--secondary-container); color: var(--on-secondary-container); font-size: 0.5625rem; font-weight: 700; padding: 0.2rem 0.5rem; border-radius: 4px;">${s.region}</span>
+                            </div>
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem 0.75rem;">
+                                <div><div class="label-sm" style="color: var(--outline); margin-bottom: 0.25rem;">Pop. 2025</div><div style="font-weight: 700; font-size: 1rem;">${s.pop2025}</div></div>
+                                <div><div class="label-sm" style="color: var(--outline); margin-bottom: 0.25rem;">2051 Proj.</div><div style="font-weight: 700; font-size: 1rem; color: var(--primary);">${s.proj2051}</div></div>
+                                <div><div class="label-sm" style="color: var(--outline); margin-bottom: 0.25rem;">Literacy</div><div style="font-weight: 700; font-size: 1rem;">${s.literacy}</div></div>
+                            </div>
+                        </div>
+                        <a href="${s.link}" style="margin-top: 1.25rem; padding-top: 0.75rem; display: flex; justify-content: space-between; align-items: center; font-weight: 700; font-size: 0.8rem; color: var(--primary); text-decoration: none;">Detailed Dashboard <span class="material-symbols-outlined" style="font-size: 1rem;">chevron_right</span></a>
+                    `;
+                    grid.appendChild(card);
+                });
+                </script>
+            </div>
+            <div style="text-align: center; margin-top: 1rem; font-size: 0.625rem; color: var(--outline); text-transform: uppercase; letter-spacing: 0.1em;">Population data: Census of India + Registrar General Projections · 2051 estimates from MoHFW Technical Group</div>
+        </div>
+    </section>
+
+    <!-- Regional Comparison -->
+    <section style="background: var(--surface-container-low); padding: 5rem 0;">
+        <div class="container" style="display: grid; grid-template-columns: 5fr 7fr; gap: 3rem; align-items: center;">
+            <div>
+                <h2 class="font-headline" style="font-size: 2rem; font-weight: 800; color: var(--primary); margin-bottom: 1rem;">Institutional Resilience by Region (2051)</h2>
+                <p style="color: var(--on-surface-variant); margin-bottom: 2rem; line-height: 1.7;">Comparing sub-national data reveals sharp disparities in resource allocation and demographic transition. While the South prepares for an aging population, the North-Central belt remains the engine of youth-led growth.</p>
+                <div style="display: flex; flex-direction: column; gap: 1rem;">
+                    <div style="background: var(--surface); padding: 1.5rem; border-radius: 0.5rem; box-shadow: 0 4px 12px rgba(0,0,0,0.04);">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;"><span class="label-sm" style="color: var(--primary);">South India (Resource Efficiency)</span><span style="font-weight: 700; color: var(--secondary); font-size: 0.875rem;">Optimal</span></div>
+                        <div class="progress-track" style="height: 0.75rem;"><div class="progress-fill" style="width: 88%; background: var(--secondary); box-shadow: 0 0 12px rgba(27,109,36,0.3);"></div></div>
+                    </div>
+                    <div style="background: var(--surface); padding: 1.5rem; border-radius: 0.5rem; box-shadow: 0 4px 12px rgba(0,0,0,0.04);">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;"><span class="label-sm" style="color: var(--primary);">Central India (Human Capital Growth)</span><span style="font-weight: 700; color: var(--tertiary-container); font-size: 0.875rem;">Expanding</span></div>
+                        <div class="progress-track" style="height: 0.75rem;"><div class="progress-fill" style="width: 94%; background: var(--tertiary-container); box-shadow: 0 0 12px rgba(95,19,0,0.3);"></div></div>
+                    </div>
+                </div>
+                <div style="margin-top: 1rem; font-size: 0.5625rem; color: var(--outline); text-transform: uppercase; letter-spacing: 0.1em;">Source: NITI Aayog Composite Index, World Bank Urban Resilience India Report</div>
+            </div>
+            <div style="background: white; padding: 0.5rem; border-radius: 1rem; box-shadow: 0 16px 48px rgba(26,35,126,0.08); overflow: hidden;">
+                <img alt="India data map visualization" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzJV9-Lgvnc7VM2g8ExS8QeUU69FS69VZzf_Fg-VPpSWBzFlgbV50tZ8EKafF8HYsjoLLIdeUot2vdiOraiWex5mDZghN2wIIVDTDFwVNAIcqe2mLCPdaQoBLhHBU72UnE01p7HwCvY6A-6zlwP_knIQYbc0u3Ma894B1KatpgE8zNX2e3fVoAdwNAON3o2-TK48MLdDNVWLLXamsGKdTYCPv6Ot0GsEvK2wzN2D-Awbrx9hrCFs_cAo1d_W4rkAJrhBk8XNkN" style="width: 100%; height: 400px; object-fit: cover; border-radius: 0.75rem;"/>
+            </div>
+        </div>
+    </section>
+
+    <div class="source-bar" style="text-align: center; padding: 1.25rem;">Data Sources: <a href="https://censusindia.gov.in" target="_blank">Census of India</a> · <a href="https://niti.gov.in" target="_blank">NITI Aayog</a> · <a href="https://mohfw.gov.in" target="_blank">MoHFW</a> · <a href="https://thedocs.worldbank.org/en/doc/d67ef885fc1c5b4ca43cf4465b3e7241-0310012025/original/Urban-Resilience-India.pdf" target="_blank">World Bank: Urban Resilience India</a></div>
+</main>
+
+<footer class="site-footer"><div class="footer-inner"><div><div class="footer-brand">The Sovereign Ledger</div><p style="color:var(--outline);font-size:0.8rem;line-height:1.6;max-width:280px;">Advancing India's data sovereignty through rigorous analytical observation.</p></div><div><h5>Navigation</h5><ul><li><a href="index.html">Home</a></li><li><a href="national-overview.html">National Overview</a></li><li><a href="state-dashboards.html">State Dashboards</a></li><li><a href="water-resources.html">Water Resources</a></li><li><a href="demographics.html">Demographics</a></li></ul></div><div><h5>Data Sources</h5><ul><li><a href="https://censusindia.gov.in" target="_blank">Census of India</a></li><li><a href="https://niti.gov.in" target="_blank">NITI Aayog</a></li></ul></div><div><h5>Legal</h5><ul><li><a href="#">Privacy Policy</a></li><li><a href="#">Terms of Service</a></li></ul></div></div><div class="footer-bottom"><div>© 2025 The Sovereign Ledger.</div><div>Institutional Grade Data</div></div></footer>
+</body>
+</html>

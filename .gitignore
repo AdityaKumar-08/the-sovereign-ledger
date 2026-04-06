@@ -1,0 +1,24 @@
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Node (in case of future additions)
+node_modules/
+dist/
+.env
+
+# Stitch design folders (original design assets)
+home_national_overview_updated_nav/
+state_dashboards_explorer_updated/
+state_dashboard_uttar_pradesh_deep_dive/
+water_resources_observatory/
+demographics_analysis_dashboard/
+national_data_overview_heatmap_enhanced/
+national_resource_sovereignty_ledger/
